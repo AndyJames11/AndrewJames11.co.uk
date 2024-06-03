@@ -1,0 +1,338 @@
+/* Imports Lato and Oswald fonts which are used throughout */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+/* Ensure all margins and padding etc. is set to 0 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Changing default font and colour */
+body {
+  font-family: Lato;
+  color: #ffffff;
+}
+
+/* LOGO AND NAVBAR ELEMENTS */
+/* Styling for my 'My Projects' logo, and also for my top Navbar */
+header h2 {
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+#logo {
+  float: left;
+  font-size: 280%;
+  margin-left: 15px;
+  text-shadow: black 0 0 10px;
+}
+
+#navbar {
+  font-size: 110%;
+  list-style-type: none;
+  letter-spacing: 4px;
+  text-shadow: black 0 0 10px;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+
+#logo, #navbar {
+  line-height: 75px;
+}
+
+#navbar li {
+  float: right;
+  margin-right: 30px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.active {
+  border-bottom: 1px solid white;
+}
+
+/* COLLAPSIBLE MENU */
+/* Ensuring the menu appears in the correct position and displays all links correctly. Also removes checkbox icon as a checkbox is used to toggle the list open and closed */
+.menu-content {
+  font-family: Lato;
+  padding: 0 0 0 0px;
+}
+
+.collapsible-menu {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 300px;
+  top: 15px;
+  z-index: 100;
+}
+
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.collapsible-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.collapsible-menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.collapsible-menu a:hover {
+  text-decoration: underline;
+}
+
+.collapsible-menu label {
+  font-family: Lato;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+input#menu {
+  display: none;
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  font-family: Lato;
+  padding-top: 35px;
+}
+
+input:checked~.menu-content {
+  max-height: 100%;
+  background-color: black;
+}
+
+/* COLLAPSIBLE MENU MEDIA QUERIES */
+/* Ensuring the menu appears in the correct position and displays all links correctly. */
+@media (min-width: 780px) {
+  .collapsible-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 779px) {
+  #home {
+    display: none;
+  }
+}
+
+@media (max-width: 706px) {
+  #cafe {
+    display: none;
+  }
+}
+
+@media (max-width: 566px) {
+  #gallery {
+    display: none;
+  }
+}
+
+/* Main Page Elements */
+/* Sets color, size, font and position for the main text on screen */
+.title {
+  color: black;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 900;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+
+.title a {
+  color: black;
+}
+
+.title a:hover {
+  color: blue;
+}
+
+/* Sets size for each image and video and aligns them all properly */
+img {
+  width: 410px;
+  height: 300px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.column iframe {
+  margin-top: 8px;
+}
+
+/* IMAGE AND VIDEO MEDIA QUERIES */
+/* Reduces size of images and videos at different screen sizes so they fit nicely and are not too big. Also allows more images per row */
+@media (max-width: 2507px) {
+  iframe {
+    width: 713px;
+  }
+  img {
+    width: 427px;
+  }
+}
+
+@media (max-width: 2178px) {
+  iframe {
+    width: 610px;
+  }
+  img {
+    width: 457px;
+  }
+}
+
+@media (max-width: 1868px) {
+  img {
+    width: 395px;
+  }
+
+  iframe {
+    width: 527.5px;
+  }
+}
+
+@media (max-width: 1620px) {
+  iframe {
+    width: 394.5px;
+  }
+  img {
+    width: 394.5px;
+  }
+}
+
+@media (max-width: 1220px) {
+  img {
+    width: 295px;
+    height: 200px;
+  }
+
+  iframe {
+    width: 295px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 922px) {
+  img {
+    width: 200px;
+    height: 150px;
+  }
+
+  iframe {
+    width: 267.5px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 840px) {
+  iframe {
+    width: 200px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 825px) {
+  iframe {
+    width: 255px
+  }
+
+  img {
+    width: 190px;
+  }
+}
+
+@media (max-width: 637px) {
+  iframe {
+    width: 403px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 434px) {
+  img {
+    width: 100vw;
+  }
+  iframe {
+    width: 100vw;
+  }
+}
+
+/* FOOTER ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+  padding-right: 7.5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  font-size: 115%;
+}
+
+.socials {
+  list-style: none;
+  float: left;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: rgb(230, 230, 37);
+}
+
+.youtube:hover {
+  color: red;
+}
+
+footer li {
+  padding: 7px 10px 10px 15px;
+}
+
+.copyright {
+  float: right;
+  color: white;
+  pointer-events: none;
+  list-style: none;
+  margin-right: 10px;
+}

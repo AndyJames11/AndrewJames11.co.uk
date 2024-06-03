@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Andy's Cafe</title>
+  <script async src="https://kit.fontawesome.com/c6b9e58955.js" crossorigin="anonymous"></script>
+  <link href="css/booking-styles.css" rel="stylesheet" type="text/css">
+  <link rel="preload" fetchpriority="high" as="image" href="images/cafe-booking.webp" type="image/webp">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <h2 ID="logo">My Projects</h2>
+    </a>
+    <nav>
+      <div class="collapsible-menu">
+        <input type="checkbox" id="menu">
+        <label for="menu">≡</label>
+        <div class="menu-content">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#">TO BE ADDED IN FUTURE About me</a></li> -->
+            <li><a href="cafe.html">Cafe Page</a></li>
+            <!-- <li><a href="#">TO BE ADDED IN FUTURE My Discord Bot</a></li> -->
+            <li><a href="gallery.html">Cup Final Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul id="navbar">
+        <li><a href="gallery.html" id="gallery">Cup Final Gallery</a></li>
+        <!-- <li><a href="#">TO BE ADDED IN FUTURE My Discord Bot</a></li> -->
+        <li><a class="active" href="cafe.html" id="cafe">Cafe Page</a></li>
+        <!-- <li><a href="#">TO BE ADDED IN FUTURE About Me</a></li> -->
+        <li><a href="index.html" id="home">Home</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div id="booking-image"></div>
+
+  <div class="booking-form-background">
+    <div class="booking-form">
+      <h1>Book a table!</h1>
+      <form action="confirmation.html">
+        <div class="form-group">
+          <label for="fname">First name<span class="required"> *</span></label>
+          <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br>
+          <label for="lname">Last name<span class="required"> *</span></label>
+          <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+          <label for="phone-number">Phone number<span class="required"> *</span></label>
+          <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required><br>
+          <label for="date">Date<span class="required"> *</span></label>
+          <input type="date" id="date" name="date" required><br>
+          <label for="time">Time<span class="required"> *</span></label>
+          <input type="time" id="time" name="time" required><br>
+          <label for="people">Number of people<span class="required"> *</span></label>
+          <select id="people" name="people" required>
+            <option label="Please choose an option" value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <input type="submit" value="Book!">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+      <li class="socials"><a href="https://www.linkedin.com/in/andrew-h-788807124/" target="_blank" class="linkedin">LinkedIn<span></span><i class="fa-brands fa-linkedin"></i></a></li>
+      <li class="socials"><a href="https://github.com/AndyJames11" target="_blank" class="github">Github<span></span><i class="fa-brands fa-github"></i></a></li>
+      <li class="socials"><a href="https://www.youtube.com/@andrewjames1167" target="_blank" class="youtube">YouTube<span></span><i class="fa-brands fa-youtube"></i></a></li>
+      <li class="copyright"><p>© 2024 AndrewJamesCo</p></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

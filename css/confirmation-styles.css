@@ -1,0 +1,248 @@
+/* Imports Lato and Oswald fonts which are used throughout */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+/* Ensure all margins and padding etc. is set to 0 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Changing default font and colour. Also making page un-scrollable */
+body {
+  font-family: Lato;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LOGO AND NAVBAR ELEMENTS */
+/* Styling for my 'My Projects' logo, and also for my top Navbar */
+h2 {
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+#logo {
+  float: left;
+  font-size: 280%;
+  margin-left: 15px;
+  text-shadow: black 0 0 10px;
+}
+
+#navbar {
+  font-size: 110%;
+  list-style-type: none;
+  letter-spacing: 4px;
+  text-shadow: black 0 0 10px;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+
+#logo, #navbar {
+  line-height: 75px;
+}
+
+#navbar li {
+  float: right;
+  margin-right: 30px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* BACKGROUND IMAGE */
+#booking-image {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../images/cafe-booking.webp") no-repeat 30% 50%/cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* COLLAPSIBLE MENU */
+/* Ensuring the menu appears in the correct position and displays all links correctly. Also removes checkbox icon as a checkbox is used to toggle the list open and closed */
+.menu-content {
+  font-family: Lato;
+  padding: 0 0 0 0px;
+}
+
+.collapsible-menu {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 300px;
+  top: 15px;
+  z-index: 100;
+}
+
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.collapsible-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.collapsible-menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.collapsible-menu a:hover {
+  text-decoration: underline;
+}
+
+.collapsible-menu label {
+  font-family: Lato;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+input#menu {
+  display: none;
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  font-family: Lato;
+  padding-top: 35px;
+}
+
+input:checked~.menu-content {
+  max-height: 100%;
+  background-color: black;
+}
+
+/* COLLAPSIBLE MENU MEDIA QUERIES */
+/* Ensuring the menu appears in the correct position and displays all links correctly. */
+@media (min-width: 780px) {
+  .collapsible-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 779px) {
+  #home {
+    display: none;
+  }
+}
+
+@media (max-width: 706px) {
+  #cafe {
+    display: none;
+  }
+}
+
+@media (max-width: 566px) {
+  #gallery {
+    display: none;
+  }
+}
+
+/* Ensuring home button and text is correctly aligned */
+.confirmation-background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 80px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sets styling and position of 'Home' button */
+.home-button {
+  border: solid 4px white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-shadow: inherit;
+  text-align: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 8px 12px 12px 12px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.confirmation-text {
+  font-family: Oswald;
+  position: absolute;
+  text-align: center;
+  top: 20vh;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  font-weight: 900;
+  text-shadow: 0 0 10px black;
+}
+
+/* FOOTER ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+  padding-right: 7.5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  font-size: 115%;
+}
+
+.socials {
+  list-style: none;
+  float: left;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: rgb(230, 230, 37);
+}
+
+.youtube:hover {
+  color: red;
+}
+
+footer li {
+  padding: 7px 10px 10px 15px;
+}
+
+.copyright {
+  float: right;
+  color: white;
+  pointer-events: none;
+  list-style: none;
+  margin-right: 10px;
+}

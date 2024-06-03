@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Andy's Cafe</title>
+  <script async src="https://kit.fontawesome.com/c6b9e58955.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/cafe-styles.css" type=text/css>
+  <link rel="preload" fetchpriority="high" as="image" href="images/cafe-page.webp" type="image/webp">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <h2 ID="logo">My Projects</h2>
+    </a>
+    <nav>
+      <div class="collapsible-menu">
+        <input type="checkbox" id="menu">
+        <label for="menu">≡</label>
+        <div class="menu-content">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#">TO BE ADDED IN FUTURE About me</a></li> -->
+            <li><a href="cafe.html">Cafe Page</a></li>
+            <!-- <li><a href="#">TO BE ADDED IN FUTURE My Discord Bot</a></li> -->
+            <li><a href="gallery.html">Cup Final Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul id="navbar">
+        <li><a href="gallery.html" id="gallery">Cup Final Gallery</a></li>
+        <!-- <li><a href="#">TO BE ADDED IN FUTURE My Discord Bot</a></li> -->
+        <li><a class="active" href="cafe.html" id="cafe">Cafe Page</a></li>
+        <!-- <li><a href="#">TO BE ADDED IN FUTURE About Me</a></li> -->
+        <li><a href="index.html" id="home">Home</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <div id="hero-image"></div>
+  <div class="cafe-title">
+    <h1>Andy's Cafe</h1>
+    <h3>Open everyday from 8am-4pm</h3>
+    <button class="booking" type="button" onclick="location.href='cafe-booking.html'">Book a table!</button>
+  </div>
+
+  <div id="location">We are located at 3 Maynard Place, Cuffley, Potters Bar, EN6 4JA</div>
+
+  <section>
+    <div class="menu-items">
+      <h2>Menu</h2>
+      <div class="row">
+        <div class="column">
+          <h3>Breakfast Menu (8am-11:30am)</h3>
+          <br><br>
+          <p><span style="font-weight: bold;">Full English</span>-<span></span>(3 Bacon, 2 Eggs, 2 Sausage, 2 Mushroom, Beans and 1 Toast)<span></span>-<span></span><span style="font-weight: bold;">£12.50</span></p><br>
+          <p><span style="font-weight: bold;">Veggie Breakfast</span>-<span></span>(2 Eggs, 2 Veggie Sausages, 4 Mushroom, 2 Tomato, Beans and 1 Toast)<span></span>-<span></span><span style="font-weight: bold;">£12.50</span></p><br>
+          <p><span style="font-weight: bold;">Eggs Benedict</span>-<span></span>(Ham and Poached Eggs on Sourdough Muffin with Hollandaise Sauce)<span></span>-<span></span><span style="font-weight: bold;">£9.25</span></p><br>
+          <p><span style="font-weight: bold;">Eggs on Toast</span>-<span></span>(Your choice of Scrambled, Fried or Poached Eggs on White or Brown Toast)<span></span>-<span></span><span style="font-weight: bold;">£4.95</span></p><br>
+          <p><span style="font-weight: bold;">Smashed Avocade on Toasted Sourdough</span>-<span></span>(Topped with Poached Eggs)<span></span>-<span></span><span style="font-weight: bold;">£7.95</span></p><br>
+          <p><span style="font-weight: bold;">Bubble 'N Bacon</span>-<span></span>(Homemade Bubble 'N Squeak with Bacon, Grilled and Eggs)<span></span>-<span></span><span style="font-weight: bold;">£9.95</span></p><br>
+          <p><span style="font-weight: bold;">Breakfast Sandwich</span>-<span></span>(Bacon or Sausage on White, Brown or Bap)<span></span>-<span></span><span style="font-weight: bold;">£4.75</span></p><br>
+          <br>
+          <h3>Lunch Menu (11:30am-4pm)</h3>
+          <br><br>
+          <p><span style="font-weight: bold;">Ham and Cheese Panini</span>-<span></span>(Served with a side salad)<span></span>-<span></span><span style="font-weight: bold;">£4.50</span></p><br>
+          <p><span style="font-weight: bold;">Club Sandwich</span>-<span></span>(Chicken, Lettuce and Bacon in a 9 inch white baguette)<span></span>-<span></span><span style="font-weight: bold;">£6.00</span></p><br>
+          <p><span style="font-weight: bold;">Salmon and Cream Cheese Toasted Bagel</span>-<span></span>(Served with a side salad)<span></span>-<span></span><span style="font-weight: bold;">£6.00</span></p><br>
+          <p><span style="font-weight: bold;">Jacket Potato</span>-<span></span>(Served with a choice of Cheese, Beans, Tuna, Pulled Pork)<span></span>-<span></span><span style="font-weight: bold;">£6.75</span></p><br>
+          <p><span style="font-weight: bold;">Beef Burger</span>-<span></span>(6oz Burger with Cheese, Lettuce, Tomato and Red Onion)<span></span>-<span></span><span style="font-weight: bold;">£11.95</span></p><br>
+          <p><span style="font-weight: bold;">Chicken Burger</span>-<span></span>(Fried Chicken Breast with Lettuce, Tomato and Mayonnaise)<span></span>-<span></span><span style="font-weight: bold;">£11.95</span></p><br>
+          <p><span style="font-weight: bold;">Sides</span>-<span></span>(Bowl of Chips, Mixed Salad or Portion of Halloumi)<span></span>-<span></span><span style="font-weight: bold;">£3.95</span></p><br>
+        </div>
+        <div class="column">
+          <h3>Drinks</h3>
+          <br><br>
+          <p><span style="font-weight: bold;">Single Espresso</span>-<span></span><span style="font-weight: bold;">£2.55</span></p><br>
+          <p><span style="font-weight: bold;">Cappuccino</span>-<span></span><span style="font-weight: bold;">£2.75</span></p><br>
+          <p><span style="font-weight: bold;">Tea</span>-<span></span><span style="font-weight: bold;">£2.75</span></p><br>
+          <p><span style="font-weight: bold;">Hot Chocolate</span>-<span></span><span style="font-weight: bold;">£2.75</span></p><br>
+          <p><span style="font-weight: bold;">Milkshakes (Chocolate, Strawberry, Banana, Vanilla)</span>-<span></span><span style="font-weight: bold;">£3.75</span></p><br>
+          <p><span style="font-weight: bold;">Canned Drinks</span>-<span></span><span style="font-weight: bold;">£1.95</span></p><br>
+          <p><span style="font-weight: bold;">Juices</span>-<span></span><span style="font-weight: bold;">£2.00</span></p><br>
+          <br>
+          <h3>Snacks</h3>
+          <br><br>
+          <p><span style="font-weight: bold;">Croissant</span>-<span></span><span style="font-weight: bold;">£1.00</span></p><br>
+          <p><span style="font-weight: bold;">Pain au Chocolat</span>-<span></span><span style="font-weight: bold;">£1.00</span></p><br>
+          <p><span style="font-weight: bold;">Baked Cookie</span>-<span></span><span style="font-weight: bold;">£0.70</span></p><br>
+          <p><span style="font-weight: bold;">Toasted Tea Cake</span>-<span></span><span style="font-weight: bold;">£2.50</span></p><br>
+          <p><span style="font-weight: bold;">Homemade Scone</span>-<span></span><span style="font-weight: bold;">£3.00</span></p><br>
+          <p><span style="font-weight: bold;">Crisps</span>-<span></span><span style="font-weight: bold;">£0.80</span></p><br>
+          <p><span style="font-weight: bold;">Chocolate Bars</span>-<span></span><span style="font-weight: bold;">£0.70</span></p><br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li class="socials"><a href="https://www.linkedin.com/in/andrew-h-788807124/" target="_blank" class="linkedin">LinkedIn<span></span><i class="fa-brands fa-linkedin"></i></a></li>
+      <li class="socials"><a href="https://github.com/AndyJames11" target="_blank" class="github">Github<span></span><i class="fa-brands fa-github"></i></a></li>
+      <li class="socials"><a href="https://www.youtube.com/@andrewjames1167" target="_blank" class="youtube">YouTube<span></span><i class="fa-brands fa-youtube"></i></a></li>
+      <li class="copyright"><p>© 2024 AndrewJamesCo</p></li>
+    </ul>
+  </footer>
+  
+</body>
+</html>

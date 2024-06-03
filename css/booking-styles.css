@@ -1,0 +1,333 @@
+/* Imports Lato and Oswald fonts which are used throughout */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+/* Ensure all margins and padding etc. is set to 0 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Changing default font and colour. Also making page un-scrollable */
+body {
+  font-family: Lato;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* LOGO AND NAVBAR ELEMENTS */
+/* Styling for my 'My Projects' logo, and also for my top Navbar */
+h2 {
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+#logo {
+  float: left;
+  font-size: 280%;
+  margin-left: 15px;
+  text-shadow: black 0 0 10px;
+}
+
+#navbar {
+  font-size: 110%;
+  list-style-type: none;
+  letter-spacing: 4px;
+  text-shadow: black 0 0 10px;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+
+#logo, #navbar {
+  line-height: 75px;
+}
+
+#navbar li {
+  float: right;
+  margin-right: 30px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* COLLAPSIBLE MENU */
+/* Ensuring the menu appears in the correct position and displays all links correctly. Also removes checkbox icon as a checkbox is used to toggle the list open and closed  */
+
+.menu-content {
+  font-family: Lato;
+  padding: 0 0 0 0px;
+}
+
+.collapsible-menu {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 300px;
+  top: 15px;
+  z-index: 100;
+}
+
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.collapsible-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.collapsible-menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.collapsible-menu a:hover {
+  text-decoration: underline;
+}
+
+.collapsible-menu label {
+  font-family: Lato;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+input#menu {
+  display: none;
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  font-family: Lato;
+  padding-top: 35px;
+}
+
+input:checked~.menu-content {
+  max-height: 100%;
+  background-color: black;
+}
+
+/* COLLAPSIBLE MENU MEDIA QUERIES */
+/* Ensuring the menu appears in the correct position and displays all links correctly. */
+@media (min-width: 780px) {
+  .collapsible-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 779px) {
+  #home {
+    display: none;
+  }
+}
+
+@media (max-width: 706px) {
+  #cafe {
+    display: none;
+  }
+}
+
+@media (max-width: 566px) {
+  #gallery {
+    display: none;
+  }
+}
+
+/* BACKGROUND IMAGE */
+/* Sets background image and styling of it. Prevents scrolling of page. */
+#booking-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: url("../images/cafe-booking.webp") no-repeat 30% 50%/cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+
+/* BOOKING FORM ELEMENTS */
+/* Sets color, size, font and position for the text. Also sets size and position of booking form fields and aligns them correctly */
+.booking-form-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 80px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-form {
+  transform: translateY(-80px);
+}
+
+.booking-form h1 {
+  font-weight: 900;
+  font-family: Lato;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+  font-size: 250%;
+}
+
+label {
+  font-size: large;
+  font-weight: 600;
+  text-shadow: 0 0 10px black;
+}
+
+.form-group {
+  width: 200%;
+  transform: translateX(-25%);
+}
+
+input, select {
+  width: 100%;
+  padding: 18px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 18px 20px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+.required {
+  color: red;
+}
+
+/* MEDIA QUERIES */
+/* Ensures all booking form fields are visible and look good on smaller devices */
+@media (max-height: 800px) {
+  .booking-form h1 {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 400px) and (max-height: 844px) {
+  input, select {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+  }
+
+  label {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+  input, select {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+  }
+
+  label {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  input, select {
+    width: 100%;
+  }
+
+  .form-group {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 950px) {
+  .form-group {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 465px) {
+  .form-group {
+    width: 75%;
+    transform: translateX(20%);
+  }
+}
+
+/* FOOTER ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+  padding-right: 7.5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  font-size: 115%;
+}
+
+.socials {
+  list-style: none;
+  float: left;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: rgb(230, 230, 37);
+}
+
+.youtube:hover {
+  color: red;
+}
+
+footer li {
+  padding: 7px 10px 10px 15px;
+}
+
+.copyright {
+  float: right;
+  color: white;
+  pointer-events: none;
+  list-style: none;
+  margin-right: 10px;
+}
