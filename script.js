@@ -103,3 +103,126 @@ function ClearPos() {
         positionElements[i].style.border = originalBorder[i]; // Restoring the original border
     }
 }
+
+function changeFormation() {
+
+    resetStyles();
+
+    const formation = document.getElementById("formationSelect").value;
+    switch (formation) {
+        case "4-3-3":
+            setPositions({
+                GK: { top: "12%", left: "50%", text: "GK", visible: true },
+                RB: { top: "30%", left: "20%", text: "RB", visible: true },
+                LCB: { top: "30%", left: "40%", text: "LCB", visible: true },
+                RCB: { top: "30%", left: "60%", text: "RCB", visible: true },
+                LB: { top: "30%", left: "80%", text: "LB", visible: true },
+                RCM: { top: "55%", left: "30%", text: "RCM", visible: true },
+                CAM: { top: "65%", left: "50%", text: "CAM", visible: true },
+                LCM: { top: "55%", left: "70%", text: "LCM", visible: true },
+                RW: { top: "80%", left: "20%", text: "RW", visible: true },
+                ST: { top: "90%", left: "50%", text: "ST", visible: true },
+                LW: { top: "80%", left: "80%", text: "LW", visible: true },
+                RM: { visible: false },
+                LM: { visible: false },
+                RDM: { visible: false },
+                LDM: { visible: false },
+                RAM: { visible: false },
+                LAM: { visible: false },
+                RS: { visible: false },
+                LS: { visible: false }
+            });
+            break;
+        case "4-2-3-1":
+            setPositions({
+                GK: { top: "12%", left: "50%", text: "GK", visible: true },
+                RB: { top: "30%", left: "20%", text: "RB", visible: true },
+                LCB: { top: "30%", left: "40%", text: "LCB", visible: true },
+                RCB: { top: "30%", left: "60%", text: "RCB", visible: true },
+                LB: { top: "30%", left: "80%", text: "LB", visible: true },
+                RDM: { top: "50%", left: "35%", text: "RDM", visible: true },
+                LDM: { top: "50%", left: "65%", text: "LDM", visible: true },
+                RAM: { top: "70%", left: "20%", text: "RAM", visible: true },
+                CAM: { top: "70%", left: "50%", text: "CAM", visible: true },
+                LAM: { top: "70%", left: "80%", text: "LAM", visible: true },
+                ST: { top: "90%", left: "50%", text: "ST", visible: true },
+                RCM: { visible: false },
+                LCM: { visible: false },
+                RM: { visible: false },
+                LM: { visible: false },
+                RW: { visible: false },
+                LW: { visible: false },
+                RS: { visible: false },
+                LS: { visible: false }
+            });
+            break;
+        case "4-4-2":
+            setPositions({
+                GK: { top: "12%", left: "50%", text: "GK", visible: true },
+                RB: { top: "30%", left: "20%", text: "RB", visible: true },
+                LCB: { top: "30%", left: "40%", text: "LCB", visible: true },
+                RCB: { top: "30%", left: "60%", text: "RCB", visible: true },
+                LB: { top: "30%", left: "80%", text: "LB", visible: true },
+                RM: { top: "55%", left: "20%", text: "RM", visible: true },
+                RCM: { top: "55%", left: "40%", text: "RCM", visible: true },
+                LCM: { top: "55%", left: "60%", text: "LCM", visible: true },
+                LM: { top: "55%", left: "80%", text: "LM", visible: true },
+                RS: { top: "80%", left: "35%", text: "ST", visible: true },
+                LS: { top: "80%", left: "65%", text: "ST", visible: true },
+                CAM: { visible: false },
+                RDM: { visible: false },
+                LDM: { visible: false },
+                RAM: { visible: false },
+                LAM: { visible: false },
+                RW: { visible: false },
+                LW: { visible: false },
+                ST: { visible: false }
+            });
+            break;
+    }
+}
+
+function setPositions(positions) {
+    for (const [position, { top, left, text, visible }] of Object.entries(positions)) {
+        const element = document.getElementById(position);
+        if (visible === false) {
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+            element.style.position = 'absolute';
+            element.style.top = top;
+            element.style.left = left;
+            element.innerText = text;
+        }
+    }
+}
+
+function resetStyles() {
+    const positionElements = document.getElementsByClassName('position');
+    for (let i = 0; i < positionElements.length; i++) {
+        positionElements[i].innerHTML = originalContent[i];
+        positionElements[i].style.backgroundColor = originalColor[i];
+        positionElements[i].style.border = originalBorder[i];
+    }
+}
+
+function getVisiblePositions() {
+    const visiblePositions = [];
+    const positionElements = document.getElementsByClassName('position');
+    for (let i = 0; i < positionElements.length; i++) {
+        if (positionElements[i].style.display !== 'none') {
+            visiblePositions.push(positionElements[i].id);
+        }
+    }
+    return visiblePositions;
+}
+
+
+
+// Numbers allowed because of shirt number - Readme
+
+// Navbar with each javascript thing on a different page 
+
+// Collapsible sections for descriptions on each JavaScript section
+
+// Possible dark/light mode switch
