@@ -228,7 +228,6 @@ function getVisiblePositions() {
 // Possible dark/light mode switch
 
 
-
 // SWEEPSTAKE SECTION
 
 // Stores the styling and text of the elements at the point the page is loaded
@@ -280,4 +279,51 @@ function resetSweepstake() {
         countryElements[i].style.backgroundColor = originalCountryColor[i];
         countryElements[i].style.color = originalCountryColor[i];
     }
+}
+
+// CURRENCY CONVERTOR
+
+// API key required for getting conversion rates from v6.exchangerate-api.com
+const apiKey = "307f81c5347b7086b868c498";
+
+// Retrieves values from the form. 
+let currencyAmount = document.getElementById("currencyAmount"); // ID of amount to convert field
+let currencyFrom = document.getElementById("currencyFrom"); // ID for 'From' field 
+let currencyTo = document.getElementById("currencyTo"); // ID for 'To' field
+let convert = document.getElementById("convert"); // ID of the 'Convert' button
+let result = document.getElementById("finalValue"); // ID of the result field
+
+function Convert() { // Adapted from --------XXXXXXXXX
+    let fromCurrency = currencyFrom.value; // Obtains currency selected in 'From' field
+    let toCurrency = currencyTo.value; // Obtains currency selected in 'To' field
+    let amount = parseFloat(currencyAmount.value); // Converts value in 'amount' field to a 'floating-point number'. 
+    // JavaScript may interpret inputs in this field as Strings even if they are numbers. 
+    // This is likely not necessary but I read online that this is considered good practice
+
+    // If input is not a number (NaN) an alert appears asking to enter a valid number
+    if (isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
+    }
+
+    // Obtains current conversion rates from the currency converter API. 
+    fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.conversion_rates && data.conversion_rates[toCurrency]) {
+            let rate = data.conversion_rates[toCurrency];
+            let total = rate * amount;
+            result.innerHTML = `${amount} ${fromCurrency} = ${total.toFixed(2)} ${toCurrency}`;
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching the exchange rate:', error);
+        result.innerHTML = "Sorry, something went wrong.";
+    });
+};
+
+
+// REACTION TIME GAME
+
+function reactionGame() {
 }

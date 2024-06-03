@@ -109,7 +109,7 @@
       </div>
     </div>
   </div>
-  
+
 <!-- EURO 2024 SWEEPSTAKE SECTION -->
 
 <div class="container text-center" id="sweepstake">
@@ -171,6 +171,80 @@
     </div>
   </div>
 </div> 
+
+<!-- CURRENCY CONVERTOR SECTION -->
+
+<!-- AMOUNT TO CONVERT -->
+  <div class="container text-center" id="convertor">
+    <label for="currencyAmount">Amount to Convert:</label>
+    <input type="text" class="currencyAmount" placeholder="0.00" id="currencyAmount">
+    
+  <!-- CONVERTED FROM -->  
+    <div class="row justify-content-center">
+      <div class="col-sm-auto">
+        <span>From</span>
+        <select id="currencyFrom" name="currencyFrom">
+          <option value="Select One">Please choose a currency</option>
+          <option value="AUD">AUD ($)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="CNY">CNY (¥)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+      </div>
+
+      <!-- CURRENCY TO CONVERT TO -->
+      <div class="col-sm-auto">
+        <span>To</span>
+        <select id="currencyTo" name="currencyTo">
+          <option value="Select One">Please choose a currency</option>
+          <option value="AUD">AUD ($)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="CNY">CNY (¥)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+      </div>
+  
+
+      <!-- CURRENCY CONVERT BUTTONS/RESULT -->
+      <div class="row justify-content-center">
+        <div class="col-sm-auto">
+          <button class="convertorBtns" id="convert" type="submit" onClick="Convert()">Convert</button>
+          <button class="convertorBtns" onclick="clearVal()">Reset</button>
+        </div>
+      </div>
+      <div id="finalAmount" class="text-center">
+        <h2>Converted Amount:
+          <span class="finalValue" id="finalValue" style="color:rgb(0, 0, 0);"></span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reaction Game -->
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <h4 id="reactionHeader">Click on the button to start the reaction speed test. When it turns green, click it! Your reaction speed will be displayed below. Good luck!</h4>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <button class="randomButtons" id="reactionButton" onclick="reactionGame()">Start!</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <p id="reactionSpeed"></p>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 
 </body>
