@@ -47,3 +47,59 @@ function RandSupp() {
     document.getElementById("SuppText").innerHTML=random;
 }
 
+// Football position section
+
+let originalContent = [];
+let originalColor = [];
+let originalBorder = [];
+
+// Stores the styling and text of the elements at the point the page is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    const positionElements = document.getElementsByClassName('position');
+    for (let i = 0; i < positionElements.length; i++) {
+        originalContent.push(positionElements[i].innerHTML);
+        originalColor.push(positionElements[i].style.backgroundColor);
+        originalBorder.push(positionElements[i].style.border);
+    }
+});
+
+let counter = 0;
+
+function RandPos() {
+    let myarray = getVisiblePositions();
+    const filledPositions = Array.from(document.getElementsByClassName('position')).filter(pos => pos.style.backgroundColor === 'yellow');
+
+    if (filledPositions.length === myarray.length) {
+        alert("All positions are filled!");
+        return;
+    }
+
+    let random;
+    do {
+        random = myarray[Math.floor(Math.random() * myarray.length)];
+    } while (document.getElementById(random).style.backgroundColor === 'yellow');
+
+    const position = document.getElementById(random);
+
+    let personName = '';
+    while (!personName) {
+        personName = prompt("Enter the person's name:").trim();
+        if (!personName) {
+            alert("Name cannot be blank. Please enter a valid name.");
+        }
+    }
+
+    position.innerHTML = personName;
+    position.style.backgroundColor = "yellow";
+    position.style.border = "1px solid black";
+    counter++;
+}
+
+function ClearPos() {
+    const positionElements = document.getElementsByClassName('position');
+    for (let i = 0; i < positionElements.length; i++) {
+        positionElements[i].innerHTML = originalContent[i];
+        positionElements[i].style.backgroundColor = originalColor[i];
+        positionElements[i].style.border = originalBorder[i]; // Restoring the original border
+    }
+}

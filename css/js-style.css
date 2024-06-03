@@ -96,8 +96,8 @@ h3 {
     border: 1px solid black;
 }
 
-/* League map background*/
-#leagueMap {
+/* League map background and football pitch */
+#leagueMap, #pitch {
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -152,3 +152,36 @@ h3 {
     color: black;
 }
 
+/* Styling and positioning of football positions */
+
+#pitch {
+    margin-bottom: 15px;
+}
+
+#GK { top: 12%; left: 50%; transform: translate(-50%, -50%); }
+#RB { top: 30%; left: 20%; transform: translate(-50%, -50%); }
+#LCB { top: 30%; left: 40%; transform: translate(-50%, -50%); }
+#RCB { top: 30%; left: 60%; transform: translate(-50%, -50%); }
+#LB { top: 30%; left: 80%; transform: translate(-50%, -50%); }
+
+#RCM { top: 55%; left: 30%; transform: translate(-50%, -50%); }
+#CAM { top: 65%; left: 50%; transform: translate(-50%, -50%); }
+#LCM { top: 55%; left: 70%; transform: translate(-50%, -50%); }
+
+#RW { top: 80%; left: 20%; transform: translate(-50%, -50%); }
+#ST { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+#LW { top: 80%; left: 80%; transform: translate(-50%, -50%); }
+
+
+ .position {
+    position: absolute;
+    width: 100px;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    line-height: 55px;
+    text-align: center;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+  }
+  

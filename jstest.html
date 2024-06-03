@@ -63,4 +63,55 @@
     </div>
   </div>
 
-  
+  <!-- FOOTBALL POSITION RANDOMISER SECTION -->
+
+  <div class="container text-center my-3">
+    <label for="formationSelect">Choose a formation:</label>
+    <select id="formationSelect" onchange="changeFormation()">
+      <option value="4-3-3">4-3-3</option>
+      <option value="4-2-3-1">4-2-3-1</option>
+      <option value="4-4-2">4-4-2</option>
+    </select>
+  </div>
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <button class="randomButtons" id="randPosButton" onclick="RandPos();">Random position</button>
+      </div>
+      <div class="col-sm-6">
+        <button class="randomButtons" id="resetButtons" onclick="ClearPos();">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center" id="pitch">
+    <div class="row">
+      <img src="/images/pitch.png" class="roleMap">
+      <div class="col">
+        <div class="position" id="GK">GK</div>
+        <div class="position" id="RB">RB</div>
+        <div class="position" id="LCB">LCB</div>
+        <div class="position" id="RCB">RCB</div>
+        <div class="position" id="LB">LB</div>
+        <div class="position" id="RCM">RCM</div>
+        <div class="position" id="CAM">CAM</div>
+        <div class="position" id="LCM">LCM</div>
+        <div class="position" id="RW">RW</div>
+        <div class="position" id="ST">ST</div>
+        <div class="position" id="LW">LW</div>
+        <div id="RM" class="position" style="display:none;">RM</div>
+        <div id="LM" class="position" style="display:none;">LM</div>
+        <div id="RDM" class="position" style="display:none;">RDM</div>
+        <div id="LDM" class="position" style="display:none;">LDM</div>
+        <div id="LAM" class="position" style="display:none;">LAM</div>
+        <div id="RAM" class="position" style="display:none;">RAM</div>
+        <div id="RS" class="position" style="display:none;">ST</div>
+        <div id="LS" class="position" style="display:none;">ST</div>    
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
