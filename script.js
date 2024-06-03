@@ -293,7 +293,7 @@ let currencyTo = document.getElementById("currencyTo"); // ID for 'To' field
 let convert = document.getElementById("convert"); // ID of the 'Convert' button
 let result = document.getElementById("finalValue"); // ID of the result field
 
-function Convert() { // Adapted from --------XXXXXXXXX
+function Convert() { // Adapted from https://www.tutorialspoint.com/how-to-create-a-currency-converter-in-javascript
     let fromCurrency = currencyFrom.value; // Obtains currency selected in 'From' field
     let toCurrency = currencyTo.value; // Obtains currency selected in 'To' field
     let amount = parseFloat(currencyAmount.value); // Converts value in 'amount' field to a 'floating-point number'. 
