@@ -185,3 +185,11 @@ h3 {
     transform: translate(-50%, -50%);
   }
   
+    /* Sweepstake section styling */
+#sweepstake {
+    padding-bottom: 15px;
+}
+
+#convertor {
+    transform: translateY(-5px);
+}

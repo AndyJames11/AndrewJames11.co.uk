@@ -226,3 +226,58 @@ function getVisiblePositions() {
 // Collapsible sections for descriptions on each JavaScript section
 
 // Possible dark/light mode switch
+
+
+
+// SWEEPSTAKE SECTION
+
+// Stores the styling and text of the elements at the point the page is loaded
+let originalCountryContent = [];
+let originalCountryColor = [];
+let originalCountryBorder = [];
+
+document.addEventListener("DOMContentLoaded", function() {
+    const countryElements = document.getElementsByClassName('country');
+    for (let i = 0; i < countryElements.length; i++) {
+        originalCountryContent.push(countryElements[i].innerHTML);
+        originalCountryColor.push(countryElements[i].style.backgroundColor);
+        originalCountryColor.push(countryElements[i].style.color);
+    }
+});
+
+let myarray = ["Germany", "Scotland", "Hungary", "Switzerland", "Spain", "Croatia", "Italy", "Albania", "Slovenia", "Denmark", "Serbia", "England", "Poland", "Netherlands", "Austria", "France", "Belgium", "Slovakia", "Romania", "Ukraine", "Turkey", "Georgia", "Portugal", "Czech Republic"];
+let assignedCountries = [];
+
+function Sweepstake() {
+  if (myarray.length === 0) {
+    document.getElementById("Sweepstake").innerHTML = "All countries have been assigned.";
+    return;
+  }
+
+  let name = prompt("Please enter your name:");
+  if (!name) {
+    alert("Name cannot be empty. Please try again.");
+    return;
+  }
+
+  let randomIndex = Math.floor(Math.random() * myarray.length);
+  let selectedCountry = myarray[randomIndex];
+
+  // alert(name + ' - ' + selectedCountry);
+
+  myarray.splice(randomIndex, 1);
+
+  let countryElement = document.getElementById(selectedCountry);
+  countryElement.textContent = `${selectedCountry} - ${name}`;
+  countryElement.style.backgroundColor = "black";
+  countryElement.style.color = "white";
+}
+
+function resetSweepstake() {
+    const countryElements = document.getElementsByClassName('country');
+    for (let i = 0; i < countryElements.length; i++) {
+        countryElements[i].innerHTML = originalCountryContent[i];
+        countryElements[i].style.backgroundColor = originalCountryColor[i];
+        countryElements[i].style.color = originalCountryColor[i];
+    }
+}
