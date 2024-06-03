@@ -1,0 +1,51 @@
+/* Imports Lato and Oswald fonts which are used throughout */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+/* Making sure all margins and padding start at 0 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Default font and text colour */
+body {
+    background-color: white;
+    font-family: Lato;
+}
+
+/* Navbar elements */
+nav {
+  width: 500px;
+  height: 100px;
+  background-color: black;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -250px;
+  position: absolute;
+  line-height: 100px;
+}
+
+nav p {
+  color: white;
+  text-align: center;
+}
+
+nav a {
+  position: absolute;
+  transform: translate(425px, -115px);
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* Snowfall Animation */
+html {
+  height: 100%;
+  background: linear-gradient(#123 30%, #667);
+  overflow: hidden;
+}
