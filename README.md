@@ -192,6 +192,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - **General Bootstrap Usage**
   - I used Bootstrap's [main page](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to implement the stylings of most of the sections to ensure they are responsive and well laid out.
 
+- **Animated Background on Front Page**
+  - I used the code found on [1stWebDseigner](https://1stwebdesigner.com/15-css-background-effects/) and converted it from HAML and SASS to HTML and CSS using a [HAML](https://herotofu.com/haml-converter) and [SASS](https://codebeautify.org/sass-to-css-converter) convertor. [Here](https://codepen.io/sarazond/pen/LYGbwj) is a link to the codepen page itself. The code was written by sarazond and they have allowed free use of it.
+
   ### Acknowledgements
 - [W3schools.com](W3schools.com), [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) and [Stack Overflow](www.stackoverflow.com) were all very useful for troubleshooting specific issues and gaining a better understanding different things such as element positioning, containers, arrow functions, etc.
 - Google was incredibly helpful for very specific things that I got stuck on during the project. I had to use Google many times to figure out why my functions were not working or to learn how to do something specific e.g. call an API for my currency convertor.

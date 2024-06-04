@@ -327,3 +327,12 @@ function Convert() { // Adapted from https://www.tutorialspoint.com/how-to-creat
 
 function reactionGame() {
 }
+
+
+// INDEX PAGE DROPDOWN MENU
+
+function dropdown() {
+    var show = document.getElementsByClassName("dropdownContent");
+    var visibility = show.style.visibility;
+    show.style.visibility = visibility == "visible" ? 'hidden' : "visible"
+}
