@@ -332,7 +332,25 @@ function reactionGame() {
 // INDEX PAGE DROPDOWN MENU
 
 function dropdown() {
-    var show = document.getElementsByClassName("dropdownContent");
-    var visibility = show.style.visibility;
-    show.style.visibility = visibility == "visible" ? 'hidden' : "visible"
-}
+    document.getElementById("dropdownList").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('#dropdownArrow')) {
+      var dropdowns = document.getElementsByClassName("dropdownContent");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+const icon = document.getElementById('dropdownArrow');
+icon.addEventListener('click', () => {
+  icon.classList.add('spin');
+});
+icon.addEventListener('animationend', ()=>{
+	icon.classList.remove('spin');
+});
