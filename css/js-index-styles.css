@@ -7,15 +7,95 @@
     padding: 0;
 }
 
+/* Dropdown list section */
+#dropdownArrow {
+  position: absolute;
+  background-size: cover;
+  background-color: transparent;
+  left: 50%;
+  width: 40px;
+  margin-left: -20px;
+  height: 40px;
+  margin-top: 5px;
+  border: 0;
+  transition: transform 1s ease-in-out;
+  transform-origin: top center;
+  cursor: pointer;
+}
+
+#dropdownArrow.flipped {
+  transform: rotateX(180deg);
+  transform-origin: top center;
+}
+
+.dropdownContent {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -240px;
+  letter-spacing: 3px;
+  background-color: transparent;
+  width: 480px;
+  min-width: 480px;
+  border: 1px solid white;
+  z-index: 1;
+  font-size: medium;
+  transform: translateY(30px);
+}
+
+
+.dropdownContent a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: lightgrey;
+  color: black;
+  font-weight: 900;
+}
+
+.show {
+  display: block;
+}
+
+#title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px; 
+}
+
+#title p {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-2000px); } 
+}
+
 /* Stars Animation. Code used is from https://1stwebdesigner.com/15-css-background-effects/ */
-
-/* Copyright (c) 2017 by sarazond https://codepen.io/sarazond/details/LYGbwj
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 
 html {
   height: 100vh;
@@ -79,95 +159,96 @@ html {
     box-shadow: 1004px 442px #FFF , 1890px 620px #FFF , 213px 919px #FFF , 973px 1006px #FFF , 1812px 1914px #FFF , 654px 1206px #FFF , 69px 829px #FFF , 920px 1777px #FFF , 790px 971px #FFF , 643px 482px #FFF , 845px 826px #FFF , 1058px 541px #FFF , 1600px 1969px #FFF , 1795px 1585px #FFF , 1160px 438px #FFF , 1237px 269px #FFF , 1326px 1227px #FFF , 181px 711px #FFF , 643px 1008px #FFF , 1971px 615px #FFF , 887px 440px #FFF , 1636px 1172px #FFF , 1509px 211px #FFF , 417px 1366px #FFF , 894px 733px #FFF , 499px 1347px #FFF , 326px 30px #FFF , 1724px 1841px #FFF , 1981px 1270px #FFF , 1848px 1907px #FFF , 1519px 824px #FFF , 1561px 1512px #FFF , 1883px 1264px #FFF , 1437px 854px #FFF , 443px 1984px #FFF , 1176px 919px #FFF , 314px 692px #FFF , 363px 1508px #FFF , 1835px 788px #FFF , 810px 800px #FFF , 1412px 1748px #FFF , 513px 475px #FFF , 306px 867px #FFF , 1739px 1075px #FFF , 580px 469px #FFF , 1393px 639px #FFF , 937px 1146px #FFF , 849px 645px #FFF , 1678px 1552px #FFF , 1697px 438px #FFF , 991px 1148px #FFF , 1348px 296px #FFF , 1397px 227px #FFF , 927px 1817px #FFF , 2px 489px #FFF , 742px 626px #FFF , 1496px 359px #FFF , 248px 894px #FFF , 1416px 6px #FFF , 1863px 405px #FFF , 149px 758px #FFF , 1783px 1011px #FFF , 819px 248px #FFF , 1488px 1607px #FFF , 361px 1977px #FFF , 141px 158px #FFF , 955px 444px #FFF , 993px 1097px #FFF , 916px 417px #FFF , 1396px 1969px #FFF , 1687px 489px #FFF , 120px 503px #FFF , 617px 288px #FFF , 18px 614px #FFF , 1478px 1556px #FFF , 1964px 1748px #FFF , 1564px 305px #FFF , 473px 853px #FFF , 1249px 1747px #FFF , 28px 1017px #FFF , 1401px 1886px #FFF , 842px 1355px #FFF , 979px 780px #FFF , 986px 1061px #FFF , 1298px 1245px #FFF , 1297px 1988px #FFF , 810px 61px #FFF , 842px 649px #FFF , 1925px 1092px #FFF , 149px 121px #FFF , 1128px 250px #FFF , 1040px 291px #FFF , 1508px 123px #FFF , 304px 1452px #FFF , 308px 576px #FFF , 424px 1198px #FFF , 1345px 1775px #FFF , 483px 786px #FFF , 1096px 1761px #FFF , 1166px 1317px #FFF; 
   }
 
-/* Dropdown list section */
-#dropdownArrow {
-  position: absolute;
-  /* background-image: url("../images/square-double-alt-arrow-down.png"); */
-  background-size: cover;
-  background-color: transparent;
-  left: 50%;
-  transform: translateX(-20px);
-  width: 40px;
-  height: 40px;
-  border: 0;
-}
 
-#dropdownArrow:hover {
-  width: 41.5px;
-  height: 41.5px;
-}
+  /* Media queries for sizing on smaller devices */
 
-.dropdownContent {
-  display: none;
-  position: absolute;
-  left: 50%;
-  margin-left: -240px;
-  letter-spacing: 3px;
-  background-color: transparent;
-  width: 480px;
-  min-width: 480px;
-  border: 1px solid white;
-  z-index: 1;
-  font-size: medium;
-  transform: translateY(50px);
-}
-
-.dropdownContent a {
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdownContent a:hover {
-  border-bottom: 1px white;
-  background-color: lightgrey;
-}
-
-.show {
-  display: block;
-}
-
-.spin {
-  animation: rotate 1s ease-out;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(180deg);
+  /* SMALL MOBILE SCREENS */
+  @media (width <= 280px) and (height <= 653px) {
+    #title {
+      font-size: 25px;
+    }
+    #title p {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .dropdownContent {
+      font-size: small;
+      letter-spacing: 1px;
+      margin: 0;
+      left: 0;
+      width: 100%;
+      min-width: 0;
+    }
+    .dropdownContent a {
+      padding: 8px 0 8px 0;
+    }
   }
-}
 
-#title {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  color: #FFF;
-  text-align: center;
-  font-family: Lato;
-  font-weight: 300;
-  font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
-  padding-left: 10px; 
-}
+  /* MOBILE SCREENS */
+  @media (width <= 450px) and (height <= 996px) {
+    #title {
+      font-size: 20px;
+      transform: translateY(-30px);
+    }
+    #title p {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-top: 15px;
+    }
+    .dropdownContent {
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin: 0;
+      left: 0;
+      width: 100%;
+      min-width: 0;
+    }
+    .dropdownContent a {
+      padding: 7px 0 7px 0;
+    }
+  }
 
-#title p {
-  font-size: 20px;
-  letter-spacing: 2px;
-}
+  /* SURFACE DUO  */
+  @media (width = 540px) and (height = 720px) {
+    #title {
+      font-size: 25px;
+    }
+    #title p {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .dropdownContent {
+      font-size: small;
+      letter-spacing: 1px;
+      left: 50%;
+      margin-left: -240px;
+      width: 480px;
+      min-width: 0;
+    }
+    .dropdownContent a {
+      padding: 8px 0 8px 0;
+    }
+  }
 
-#title span {
-  background: -webkit-linear-gradient(white, #38495a);
-  -webkit-background-clip: text;
-}
-
-@keyframes animStar {
-  from {
-    transform: translateY(0px); }
-  to {
-    transform: translateY(-2000px); } 
-}
+  /* SURFACE PRO */
+  @media (width = 912px) and (height = 1368px) {
+    #title {
+      font-size: 65px;
+      transform: translateY(-110px);
+    }
+    #title p {
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+    .dropdownContent {
+      font-size: 25px;
+      letter-spacing: 3px;
+      left: 50%;
+      margin-left: -350px;
+      width: 700px;
+      min-width: 0;
+    }
+    .dropdownContent a {
+      padding: 12px 0 12px 0;
+    }
+  }

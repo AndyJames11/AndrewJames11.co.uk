@@ -331,26 +331,25 @@ function reactionGame() {
 
 // INDEX PAGE DROPDOWN MENU
 
-function dropdown() {
-    document.getElementById("dropdownList").classList.toggle("show");
-  }
-  window.onclick = function(event) {
-    if (!event.target.matches('#dropdownArrow')) {
-      var dropdowns = document.getElementsByClassName("dropdownContent");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownArrow = document.getElementById("dropdownArrow");
+    const dropdownList = document.getElementById("dropdownList");
 
-const icon = document.getElementById('dropdownArrow');
-icon.addEventListener('click', () => {
-  icon.classList.add('spin');
-});
-icon.addEventListener('animationend', ()=>{
-	icon.classList.remove('spin');
+    function dropdown() {
+        if (dropdownList.style.display === "none" || dropdownList.style.display === "") {
+            dropdownList.style.display = "inline-block";
+            dropdownList.style.maxHeight = dropdownList.scrollHeight + "px";
+            dropdownArrow.classList.add("flipped");
+            dropdownList.style.transition = "max-height 1s ease-in-out";
+        } else {
+            dropdownList.style.maxHeight = "0px";
+            dropdownList.style.transition = "max-height 1s ease-in-out";
+            dropdownArrow.classList.remove("flipped");
+            setTimeout(() => {
+                dropdownList.style.display = "none";
+            }, 1000);
+        }
+    }
+
+    dropdownArrow.addEventListener("click", dropdown);
 });
