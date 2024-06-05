@@ -314,6 +314,10 @@ footer {
   transform: translateY(7px);
 }
 
+footer ul {
+  padding-left: 5px;
+}
+
 .socials {
   list-style: none;
   float: left;
@@ -347,5 +351,5 @@ footer li {
   pointer-events: none;
   list-style: none;
   margin-right: 10px;
-  line-height: 20px;
+  line-height: 17px;
 }

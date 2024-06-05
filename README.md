@@ -195,6 +195,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - **Animated Background on Front Page**
   - I used the code found on [1stWebDseigner](https://1stwebdesigner.com/15-css-background-effects/) and converted it from HAML and SASS to HTML and CSS using a [HAML](https://herotofu.com/haml-converter) and [SASS](https://codebeautify.org/sass-to-css-converter) convertor. [Here](https://codepen.io/sarazond/pen/LYGbwj) is a link to the codepen page itself. The code was written by sarazond and they have allowed free use of it.
 
+- **Coming Soon Page(Reaction Test Page)**
+  - I used a template on W3Schools for this page. The source of the code is [here](https://www.w3schools.com/howto/howto_css_coming_soon.asp). The image used is taken from [here](https://wallpaper.mob.org/pc/image/earth-waterfall-forest-mountain-nature-sunset-water-1505348.html)
+
   ### Acknowledgements
 - [W3schools.com](W3schools.com), [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) and [Stack Overflow](www.stackoverflow.com) were all very useful for troubleshooting specific issues and gaining a better understanding different things such as element positioning, containers, arrow functions, etc.
 - Google was incredibly helpful for very specific things that I got stuck on during the project. I had to use Google many times to figure out why my functions were not working or to learn how to do something specific e.g. call an API for my currency convertor.
