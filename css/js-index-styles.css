@@ -68,7 +68,7 @@
   top: 40%;
   left: 0;
   right: 0;
-  color: #FFF;
+  color: white;
   text-align: center;
   font-family: Lato;
   font-weight: 300;
@@ -83,7 +83,7 @@
   letter-spacing: 2px;
 }
 
-#title span {
+#title span, #navbar {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
 }
@@ -252,3 +252,100 @@ html {
       padding: 12px 0 12px 0;
     }
   }
+
+    /* LARGE SCREENS */
+    @media (width >= 1920px) and (height >= 796px) {
+      #title {
+        font-size: 80px;
+        transform: translateY(-180px);
+      }
+      #title p {
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+      .dropdownContent {
+        font-size: 35px;
+        letter-spacing: 3px;
+        left: 50%;
+        margin-left: -500px;
+        width: 1000px;
+        min-width: 0;
+      }
+      .dropdownContent a {
+        padding: 8px 0 8px 0;
+      }
+    }
+
+/* FOOTER AND NAV ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+  padding-right: 7.5px;
+}
+
+#navbar {
+  font-size: 15px;
+  letter-spacing: 2px;
+  height: 30px;
+  color: white;
+  width: 100%;
+  left: 50%;
+  margin-left: -1%;
+  position: fixed;
+  margin-top: 5px;
+  font-family: Lato;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: black;
+  font-size: 115%;
+  transform: translateY(7px);
+}
+
+.socials {
+  list-style: none;
+  float: left;
+  line-height: 2px;
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: rgb(230, 230, 37);
+}
+
+.youtube:hover {
+  color: red;
+}
+
+footer li {
+  padding: 7px 10px 10px 10px;
+}
+
+.copyright {
+  float: right;
+  color: white;
+  pointer-events: none;
+  list-style: none;
+  margin-right: 10px;
+  line-height: 20px;
+}
