@@ -193,3 +193,80 @@ h3 {
 #convertor {
     transform: translateY(-5px);
 }
+
+/* FOOTER AND NAV ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+    padding-right: 7.5px;
+  }
+  
+  #navbar {
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 30px;
+    color: white;
+    width: 100%;
+    left: 50%;
+    margin-left: -1%;
+    position: fixed;
+    margin-top: 5px;
+    font-family: Lato;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #navbar a:hover {
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    font-size: 115%;
+  }
+  
+  footer ul {
+    padding-left: 5px;
+  }
+  
+  .socials {
+    list-style: none;
+    float: left;
+    transform: translateY(-10px);
+  }
+  
+  .socials a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .linkedin:hover {
+    color: #0077b5;
+  }
+  
+  .github:hover {
+    color: rgb(230, 230, 37);
+  }
+  
+  .youtube:hover {
+    color: red;
+  }
+  
+  footer li {
+    padding: 7px 10px 10px 5px;
+  }
+  
+  .copyright {
+    float: right;
+    color: white;
+    pointer-events: none;
+    list-style: none;
+    margin-right: 10px;
+    line-height: 10px;
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript Playground</title>
+  <link href="../css/js-style.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/c6b9e58955.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- CURRENCY CONVERTOR SECTION -->
+
+<!-- AMOUNT TO CONVERT -->
+  <div class="container text-center" id="convertor">
+    <label for="currencyAmount">Amount to Convert:</label>
+    <input type="text" class="currencyAmount" placeholder="0.00" id="currencyAmount">
+    
+  <!-- CONVERTED FROM -->  
+    <div class="row justify-content-center">
+      <div class="col-sm-auto">
+        <span>From</span>
+        <select id="currencyFrom" name="currencyFrom">
+          <option value="Select One">Please choose a currency</option>
+          <option value="AUD">AUD ($)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="CNY">CNY (¥)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+      </div>
+
+      <!-- CURRENCY TO CONVERT TO -->
+      <div class="col-sm-auto">
+        <span>To</span>
+        <select id="currencyTo" name="currencyTo">
+          <option value="Select One">Please choose a currency</option>
+          <option value="AUD">AUD ($)</option>
+          <option value="CAD">CAD ($)</option>
+          <option value="CNY">CNY (¥)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="JPY">JPY (¥)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+      </div>
+  
+
+      <!-- CURRENCY CONVERT BUTTONS/RESULT -->
+      <div class="row justify-content-center">
+        <div class="col-sm-auto">
+          <button class="convertorBtns" id="convert" type="submit" onClick="Convert()">Convert</button>
+          <button class="convertorBtns" onclick="clearVal()">Reset</button>
+        </div>
+      </div>
+      <div id="finalAmount" class="text-center">
+        <h2>Converted Amount:
+          <span class="finalValue" id="finalValue" style="color:rgb(0, 0, 0);"></span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+    <ul>
+      <li class="socials"><a href="https://www.linkedin.com/in/andrew-h-788807124/" target="_blank" class="linkedin">LinkedIn<span></span><i class="fa-brands fa-linkedin"></i></a></li>
+      <li class="socials"><a href="https://github.com/AndyJames11" target="_blank" class="github">Github<span></span><i class="fa-brands fa-github"></i></a></li>
+      <li class="socials"><a href="https://www.youtube.com/@andrewjames1167" target="_blank" class="youtube">YouTube<span></span><i class="fa-brands fa-youtube"></i></a></li>
+      <li class="copyright"><p>© 2024 AndrewJamesCo</p></li>
+    </ul>
+  </footer>
+</body>
+<script src="../js/script.js"></script>
+</html>
