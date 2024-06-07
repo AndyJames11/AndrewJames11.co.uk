@@ -10,14 +10,9 @@
 /* Dropdown list section */
 #dropdownArrow {
   position: absolute;
-  background-size: cover;
-  background-color: transparent;
   left: 50%;
-  width: 40px;
   margin-left: -20px;
-  height: 40px;
   margin-top: 5px;
-  border: 0;
   transition: transform 1s ease-in-out;
   transform-origin: top center;
   cursor: pointer;

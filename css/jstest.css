@@ -34,28 +34,24 @@ nav a:hover {
 }
 
 /* Dropdown list section */
+.label {
+    display: inline-block;
+    margin-right: 5px;
+}
+
 #navbarArrow {
-    position: absolute;
-    background-size: cover;
-    background-color: transparent;
-    color: black;
-    left: 50%;
-    width: 40px;
-    margin-left: -20px;
-    height: 40px;
-    margin-top: 5px;
-    border: 0;
     transition: transform 1s ease-in-out;
     transform-origin: top center;
-    cursor: pointer;
-  }
-  
-  #navbarArrow.flipped {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#navbarArrow.flipped {
     transform: rotateX(180deg);
     transform-origin: top center;
-  }
-  
-  .dropdownContent {
+}
+
+.dropdownContent {
     display: none;
     max-height: 0;
     overflow: hidden;
@@ -69,23 +65,23 @@ nav a:hover {
     border: 1px solid rgb(0, 0, 0);
     z-index: 1;
     font-size: medium;
-    transform: translateY(30px);
-  }
-  
-  
-  .dropdownContent a {
+    transform: translateY(75px);
+}
+
+
+.dropdownContent a {
     color: rgb(0, 0, 0);
     padding: 8px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdownContent a:hover {
+}
+
+.dropdownContent a:hover {
     background-color: lightgrey;
     color: black;
     font-weight: 900;
-  }
-  
-  .show {
+}
+
+.show {
     display: block;
-  }
+}
