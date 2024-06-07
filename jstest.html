@@ -42,6 +42,23 @@
     </div>
   </div>
 
+  <div id="container">
+    <div id="instructions">
+      <p>Click the button below to being the reaction test. When the button changes to green, click it again! Your time will be displayed below. Good luck!</p>
+    </div>
+    <div id="default-state">
+        <button id="start-button" onclick="reactionTest()">Click me to begin reaction test!</button>
+    </div>
+    <div id="first-click" style="display: none;">
+        <button id="delay-button" style="background-color: red;">Click me when the button turns green!</button>
+    </div>
+    <div id="second-click" style="display: none;">
+        <button id="result-button" style="background-color: green;">Click now!</button>
+        <p id="result-message"></p>
+        <button onclick="location.reload()">Try Again!</button> <!-- Reloads page when button is clicked -->
+    </div>
+</div>
+
   <script src="../js/script.js"></script>
 
 </body>

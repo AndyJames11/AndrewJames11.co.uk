@@ -65,7 +65,7 @@ nav a:hover {
     border: 1px solid rgb(0, 0, 0);
     z-index: 1;
     font-size: medium;
-    transform: translateY(75px);
+    transform: translateY(35px);
 }
 
 
@@ -84,4 +84,22 @@ nav a:hover {
 
 .show {
     display: block;
+}
+
+#container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+button {
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#result-message {
+    font-size: 20px;
+    margin-top: 20px;
 }

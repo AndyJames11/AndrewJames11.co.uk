@@ -305,29 +305,65 @@ function Convert() { // Adapted from https://www.tutorialspoint.com/how-to-creat
     }
 
     // Obtains current conversion rates from the currency converter API. 
-    fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.conversion_rates && data.conversion_rates[toCurrency]) {
-            let rate = data.conversion_rates[toCurrency];
-            let total = rate * amount;
-            result.innerHTML = `${amount} ${fromCurrency} = ${total.toFixed(2)} ${toCurrency}`;
+    fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`) // Returns a promise from the API
+    .then(response => response.json()) // Handles the promise and parses the JSON text
+    .then(data => { // Handles promise returned by the response.json()
+        if (data.conversion_rates && data.conversion_rates[toCurrency]) { // Checks if 'data' has a proprety of 'conversion_rates' and if it contains the target currency
+            let rate = data.conversion_rates[toCurrency]; // stores the conversion rate of the specified currency
+            let total = rate * amount; // Multiplies the conversion rate by the amount in the input field
+            result.innerHTML = `${amount} ${fromCurrency} = ${total.toFixed(2)} ${toCurrency}`; 
+            // Updates innerHTML text to show the amount of the selected currency e.g. $200 = the calculated total to 2 decimal places e.g. £160
         }
     })
-    .catch(error => {
-        console.error('Error fetching the exchange rate:', error);
-        result.innerHTML = "Sorry, something went wrong.";
+    .catch(error => { // Catches any errors that occur
+        console.error('Error fetching the exchange rate:', error); // Logs error message to console
+        result.innerHTML = "Sorry, something went wrong."; // Displays this text if an error occurs
     });
 };
 
 
 // REACTION TIME GAME
 
-function reactionGame() {
+let startTime, endTime, timeoutId;
+
+function reactionTest() {
+    document.getElementById('default-state').style.display = 'none'; // Hide first-state button on click
+    document.getElementById('first-click').style.display = 'block'; // Show second-state button on click
+
+    const randomDelay = Math.random() * 7000 + 3000; // random time between 3000ms and 10000ms.
+    // Math.random() * 7000 generates a random number between 0 and 7000. 
+    // Adding 3000 ensures the minimum value is 3000 (3 seconds), and the maximum is 10000 (10 seconds).
+
+    timeoutId = setTimeout(() => { // Function to be executed after randomDelay
+        document.getElementById('delay-button').style.backgroundColor = 'green'; // Set colour to green
+        document.getElementById('delay-button').innerText = 'Click now!'; // Set inner text to 'Click now!'
+        startTime = new Date().getTime(); // Gets the time at the point the button turns green
+        document.getElementById('delay-button').onclick = getReactionTime; // Runs getReactionTime function onclick
+    }, randomDelay); // Runs the setTimeout() function after the randomDelay
 }
 
+function getReactionTime() {
+    endTime = new Date().getTime(); // Time at point button is clicked
+    const reactionTime = (endTime - startTime) / 1000; // Calculates the time in seconds from when button turned green to when user clicked it
 
-// INDEX PAGE DROPDOWN MENU
+    document.getElementById('first-click').style.display = 'none'; // Hides the second-state of the button
+    document.getElementById('second-click').style.display = 'block'; // Show the final state of the button
+
+    document.getElementById('result-message').innerText = `Your reaction speed was ${reactionTime.toFixed(3)} seconds! Well done!`; 
+    // Displays the calculated reaction time to 3 decimal points
+}
+
+// Clear timeout if user clicks before green
+document.getElementById('delay-button').onclick = () => {
+    clearTimeout(timeoutId); // Clears randomDelay timer and stops function running so the button will not change
+    alert("You clicked too early! Please try again."); // Display an alert
+    document.getElementById('default-state').style.display = 'block'; // Shows the first-state of the button again
+    document.getElementById('first-click').style.display = 'none'; // Hides the second-state
+};
+
+
+
+// NAVBAR DROPDOWN MENUS
 
 document.addEventListener("DOMContentLoaded", function() {
     const dropdownArrows = document.getElementsByClassName("navbarArrow");
