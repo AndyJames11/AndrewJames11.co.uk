@@ -83,7 +83,7 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - Verified that using the dropdown to select a formation works as intended and switching back and forth between formations correctly displays the positions.
   - Ensured that the "Random position" button displays random positions based on the chosen formation without selecting a position which is already chosen.
   - Made sure reset button correctly resets the formations and positions back to the default state.
-  - Tested that inputting a 'space' or not inputting anything for the name prompt shows an alert to say you must enter a name.
+  - Tested that inputting a 'space' or not inputting anything for the name prompt shows an alert to say you must enter a name. (Numbers are allowed as users may choose to use their football shirt number instead of their name).
 - **Currency Converter**:
   - Tested that entering an amount and selecting currencies converts the value accurately.
   - Verified that the "Reset" button resets the section to it's default state.
