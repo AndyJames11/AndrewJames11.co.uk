@@ -442,7 +442,10 @@ function getReactionTime() {
     const reactionTime = (endTime - startTime) / 1000; // Calculates the time in seconds from when button turned green to when user clicked it
 
     document.getElementById('first-click').style.display = 'none'; // Hides the second-state of the button
-    document.getElementById('second-click').style.display = 'block'; // Show the final state of the button
+    document.getElementById('second-click').style.display = 'block'; // Show the 'click now!' state of the button
+
+    document.getElementById('second-click').style.display = 'none';
+    document.getElementById('try-again').style.display = 'block';
 
     document.getElementById('result-message').innerText = `Your reaction speed was ${reactionTime.toFixed(3)} seconds! Well done!`; 
     // Displays the calculated reaction time to 3 decimal points
@@ -514,3 +517,21 @@ document.addEventListener("DOMContentLoaded", function() {
         closeOpenDropdowns(); // Close the open dropdown
     });
 });
+
+// Collapsible button for descriptions of different features
+let accordian = document.getElementsByClassName("collapsible"); // Define the variable 'accordian' and link to .collapsible element
+let i;
+
+for (i = 0; i < accordian.length; i++) { 
+  accordian[i].addEventListener("click", function() {
+    this.classList.toggle("active"); // Adds/removes '.active' class to the element on click
+    let content = this.nextElementSibling; // Links 'content' to the next sibling of '.collapsible' which in this case is the 'p' element
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null; // If content is visible, hide it
+      content.style.borderWidth = "0"; // Hide the border
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px"; // If content is invisible, show it
+      content.style.borderWidth = "1px"; // Show the border
+    }
+  });
+}

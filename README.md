@@ -23,24 +23,26 @@ This project is built as part of my portfolio to demonstrate the skills I have l
 2. **Football Position Randomizer**: Provides random football positions based on selected formations. Primarily used for FIFA Pro Clubs, but can also be used for normal 11-a-side football.
 3. **Euro 2024 Sweepstake Simulator**: A sweepstake for the upcoming Euros football competition where the user is prompted to input a name, and then that name is assigned to a country playing in the Euros.
 4. **Currency Converter**: A standard currency convertor which utilises a currency exchange API.
+5. **Reaction Test Game**: A game where you click a button when the colour changes from Red to Green and your speed is recorded and displayed to you.
 
 ## User Experience
 ### User Stories
 - **First-time Visitors**:
   - Understand the purpose of each section easily.
-  - Use the randomizer features without needing prior knowledge.
+  - Use the randomiser features without needing prior knowledge.
 - **Returning Visitors**:
-  - Quickly access their favorite features.
+  - Quickly access their favourite features.
   - See any new updates or improvements in functionality.
 - **Frequent Visitors**:
   - Enjoy a seamless and consistent experience.
   - Benefit from any added features or optimizations.
+  - Continue to use their favourite features.
 
 ## Design and Typography
 - **Typography**: Uses Lato font for clarity and readability.
 - **Color Scheme**: 
-  - Background: ***TBA***
-  - Navbar: ***TBA***
+  - Background: On the JS-Index page I used a starry animated background which I sourced from [Here](https://codepen.io/sarazond/pen/LYGbwj). I then edited some of it to fit my page. On the Coming Soon page, the background used is linked [here](https://wallpaper.mob.org/pc/image/earth-waterfall-forest-mountain-nature-sunset-water-1505348.html). For the other JavaScript pages, backgrounds were used to have clear contrast between the features and the background.
+  - Navbar: I designed a functional Navbar with clear sections and smooth transitions to ensure the user can quickly find the page they want to go to.
   - Buttons: Cyan with animated hover effects
 - **Imagery**:
   - League of Legends role icons
@@ -69,6 +71,7 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - Made sure the layout was responsive across different devices and screen sizes.
   - Ensured that the randomisers were not giving repeat results.
 - **Performance Optimization**:
+  - Used low resolution images for faster page loading.
   - Minimized DOM manipulation for faster interaction.
   - Used efficient loops.
 
@@ -88,12 +91,22 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - Tested that entering an amount and selecting currencies converts the value accurately.
   - Verified that the "Reset" button resets the section to it's default state.
   - Entering something which is not a number correctly warns you to input a number.
+- **Reaction Game Test**:
+  - Tested that clicking the button started the game.
+  - Verified that clicking the button early displayed an alert and reset the button to default state.
+  - Ensured that on clicking the button after it turns green, the correct reaction time is displayed underneath.
+- **Dropdown + Accordian Sections**
+  - Verified that clicking on the dropdown arrows in the navigation bars correctly opens and closes the section.
+  - Ensured that clicking on a different navigation menu closes the currently open one.
+  - Verified that clicking on the accordians for the descriptions of the features correctly opens and closes the section.
+  - Ensured that the content for the navigation bars and the accordian sections correctly displays and hides.
 
 ## Bugs
 1. **Random Role Button Text**: The text on the random role button sometimes fails to reset properly. ***Fixed 03/06/2024***
 2. **Random League Role Icons**: The icons sometimes move slightly out of their intended position when the screen is resized.
 3. **Football Position Visibility**: Some positions incorrectly remain visible when switching between formations. ***Fixed 29/05/2024***
 4. **Sweepstake**: The reset button does not work correctly. It resets the text to white, the content to the football positions, and some of the content to undefined and also does not remove the highlighting on some of the content. ***Fixed 03/06/2024***
+5. **JS-Index Page**: The page sometimes displayed incorrectly on smaller devices. The entire HTML content would be shrunk into the corner, and excess incorrect content would display in the rest of the screen. ***Fixed 11/06/2024***  
 
 ## Deployment
 ### GitHub Pages
@@ -145,6 +158,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - **Football Position Randomizer**: (Currently commented out) Uncomment the relevant sections in `jstest.html` to enable this feature. Use the dropdown to select a formation and click the "Random position" button to select random football positions.
 - **Sweepstake**: Click the Sweepstake button and then enter a name to assign that name to a country for the Euro's competition. This is intended to be used as a standard sweepstakes randomiser and I have already used it at my job for our company sweepstake. 
 - **Currency Converter**: Enter the amount, select the currencies to convert from and to, and click "Convert". Click "Reset" to clear the inputs.
+- **Reaction Test Game**: Click on the button to begin the reaction test. The button will turn red and begin a timer in the background. After a random time (between 3 and 10 seconds) the button will turn green. Click the button as quickly as you can after it turns green. Your score will be displayed below as the time it took to click the button after it became green. If you click the button too early, the game will reset and you will be told to not click it until it turns green.
 
 ## Credits
 ### Media
@@ -181,6 +195,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - **Random Selection Functions**: 
   - The random selection logic for roles and champions uses a common approach found in various coding forums:
+
     ```javascript
     function getRandomItem(array) {
         const randomIndex = Math.floor(Math.random() * array.length);
@@ -189,14 +204,17 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
     ```
     Source: [JavaScript Info](https://javascript.info/task/random)
 
-- **General Bootstrap Usage**
-  - I used Bootstrap's [main page](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to implement the stylings of most of the sections to ensure they are responsive and well laid out.
-
 - **Animated Background on Front Page**
   - I used the code found on [1stWebDseigner](https://1stwebdesigner.com/15-css-background-effects/) and converted it from HAML and SASS to HTML and CSS using a [HAML](https://herotofu.com/haml-converter) and [SASS](https://codebeautify.org/sass-to-css-converter) convertor. [Here](https://codepen.io/sarazond/pen/LYGbwj) is a link to the codepen page itself. The code was written by sarazond and they have allowed free use of it.
 
-- **Coming Soon Page(Reaction Test Page)**
+- **Coming Soon Page**
   - I used a template on W3Schools for this page. The source of the code is [here](https://www.w3schools.com/howto/howto_css_coming_soon.asp). The image used is taken from [here](https://wallpaper.mob.org/pc/image/earth-waterfall-forest-mountain-nature-sunset-water-1505348.html)
+
+- **Accordian (Description) Sections**
+  - I once again used a template on W3Schools for this as I was unsure how to make this work. After using the code on the site, I was able to understand the code and re-wrote it from scratch to fit my needs. The original template that I used is linked [here](https://www.w3schools.com/howto/howto_js_collapsible.asp) 
+
+- **General Bootstrap Usage**
+  - I used Bootstrap's [main page](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to implement the stylings of most of the sections to ensure they are responsive and well laid out.
 
   ### Acknowledgements
 - [W3schools.com](W3schools.com), [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) and [Stack Overflow](www.stackoverflow.com) were all very useful for troubleshooting specific issues and gaining a better understanding different things such as element positioning, containers, arrow functions, etc.
