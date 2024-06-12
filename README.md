@@ -95,11 +95,14 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - Tested that clicking the button started the game.
   - Verified that clicking the button early displayed an alert and reset the button to default state.
   - Ensured that on clicking the button after it turns green, the correct reaction time is displayed underneath.
+<<<<<<< HEAD
 - **Dropdown + Accordian Sections**
   - Verified that clicking on the dropdown arrows in the navigation bars correctly opens and closes the section.
   - Ensured that clicking on a different navigation menu closes the currently open one.
   - Verified that clicking on the accordians for the descriptions of the features correctly opens and closes the section.
   - Ensured that the content for the navigation bars and the accordian sections correctly displays and hides.
+=======
+>>>>>>> 666bae0ab4e118e63ee84250ff10e0f024e816be
 
 ## Bugs
 1. **Random Role Button Text**: The text on the random role button sometimes fails to reset properly. ***Fixed 03/06/2024***
