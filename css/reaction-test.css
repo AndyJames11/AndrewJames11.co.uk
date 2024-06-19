@@ -1,3 +1,6 @@
+/* Imports Lato and Oswald fonts which are used throughout */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,46 +11,35 @@ body {
     font-family: Lato;
 }
 
-/* Navbar elements */
-nav {
-    width: 100%;
-    height: 25px;
-    background-color: black;
-}
-
-nav p {
-    color: white;
-    text-align: center;
-}
-
-nav a {
-    float: right;
-    position: inline;
-    text-decoration: none;
-    transform: translateY(-39px);
-    margin-right: 10px;
-    color: white;
-}
-
-nav a:hover {
-    color: yellow;
-    text-decoration: underline;
-}
-
 /* Dropdown list section */
+#nav {
+    background-color: lightgray;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
 .label {
     display: inline-block;
     margin-right: 5px;
+    margin-top: 10px;
 }
 
-#navbarArrow {
+#navbarArrow, #navbarArrowCombined {
     transition: transform 1s ease-in-out;
     transform-origin: top center;
     display: inline-block;
     vertical-align: middle;
 }
 
-#navbarArrow.flipped {
+#navbarArrow.flipped, #navbarArrowCombined.flipped {
     transform: rotateX(180deg);
     transform-origin: top center;
 }
@@ -57,10 +49,9 @@ nav a:hover {
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    left: 50%;
-    margin-left: -240px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     background-color: white;
+    margin-left: -240px;
     width: 480px;
     min-width: 480px;
     border: 1px solid rgb(0, 0, 0);
@@ -68,7 +59,6 @@ nav a:hover {
     font-size: medium;
     transform: translateY(35px);
 }
-
 
 .dropdownContent a {
     color: rgb(0, 0, 0);
@@ -87,63 +77,52 @@ nav a:hover {
     display: block;
 }
 
-#container {
-    text-align: center;
-    margin-top: 100px;
+.combined-dropdown {
+  display: none;
 }
 
-button {
-    font-weight: bold;
-    font-size: 15px;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 50%;
-    background-color: cyan;
-    box-shadow: 2px 2px 5px #888888;
-}
-
-#result-message {
-    font-size: 15px;
-    margin-top: 20px;
+/* Main Page Elements */
+#description {
+    margin-top: 3%;
 }
 
 .collapsible {
     text-align: center;
-    background-color: #00fbff;
-    border: 1px solid cyan;
+    background-color: rgb(180, 230, 250);
+    border: 1px solid rgb(180, 230, 250);
+    border-radius: 10px;
     box-shadow: 2px 2px 5px #888888;
     color: black;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
-    padding: 18px;
+    padding: 0 18px;
     width: 75%;
+    height: 60px;
     left: 50%;
     margin-left: -37.5%;
     position: absolute;
-  }
-  
-  .active, .collapsible:hover {
+}
+
+.active, .collapsible:hover {
     transition: all .1s linear;
-    background-color: rgb(0, 220, 255);
+    background-color: rgb(180, 230, 250);
     border: 1px solid black;
-  }
-  
-  .collapsible:after {
+}
+
+.collapsible:after {
     content: '\002B'; /* This is the unicode for the '+' symbol */
     color: black;
     font-weight: bold;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2212"; /* This is the unicode for the '-' symbol */
-  }
-  
-  .content {
+}
+
+.content {
     position: absolute;
     padding: 0px 5px;
     max-height: 0;
@@ -152,8 +131,722 @@ button {
     left: 50%;
     margin-left: -37.5%;
     transition: max-height 0.2s ease-out;
-    background-color: lightcyan;
+    background-color: rgb(180, 230, 250);
     box-shadow: 2px 2px 5px #888888;
     transform: translateY(65px);
     border: 0 solid black;
+}
+
+.game {
+    margin-top: 14%;
+}
+
+button {
+    width: 100%;
+    height: 150px;
+    border: 0;
+    background-color: rgb(43, 135, 209);
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.about {
+    width: 50%;
+    left: 50%;
+    margin-left: 25%;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 3%;
+}
+
+#about {
+    text-align: left;
+    border: 1px black;
+    padding: 0px 10px;
+}
+
+#about h2 {
+    text-decoration: underline 1px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: 18px;
+}
+
+#result-message {
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* FOOTER ELEMENTS BELOW */
+/* Spacing between Footer text and respective icon. Also styling on hover of link + positioning of links and copyright text */
+span {
+    padding: 0 3.5px;
+}
+  
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    font-size: 115%;
+}
+  
+footer ul {
+    padding-left: 5px;
+}
+  
+.socials {
+    list-style: none;
+    float: left;
+    line-height: 0px;
+    transform: translateY(-3px);
+}
+  
+.socials a {
+    color: white;
+    text-decoration: none;
+}
+
+.linkedin:hover {
+    color: #0077b5;
+}
+  
+.github:hover {
+    color: rgb(230, 230, 37);
+}
+  
+.youtube:hover {
+    color: red;
+}
+  
+footer li {
+    padding: 7px 10px 10px 10px;
+}
+  
+.copyright {
+    float: right;
+    color: white;
+    pointer-events: none;
+    list-style: none;
+    margin-right: 10px;
+    line-height: 12px;
+}
+
+/* Media queries for all devices */
+@media (width >= 1920px) and (height >= 796px) {
+    html, body {
+        height: 100vh;
+        width: 100vw;
+      }
+      .dropdownContent {
+        transform: translateY(75px);
+      }
   }
+  
+/* LARGE TABLETS */
+@media (width <= 1024px) and (height <= 1366px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 75px;
+        font-size: 20px;
+    }
+    .label {
+        margin-top: 20px;
+    }
+    .dropdownContent {
+        transform: translateY(75px);
+        font-size: 20px;
+        letter-spacing: 1px;
+        width: 400px;
+        min-width: 400px;
+    }
+    .dropdownContent a {
+        padding: 3px 0;
+    }
+    .collapsible {
+        font-size: 25px;
+    }
+    .content {
+        font-size: 25px;
+    }
+    .game {
+        margin-top: 17%;
+    }
+    .about {
+        margin-top: 8%;
+        width: 70%;
+        margin-left: 15%;
+    }
+    #about h2 {
+        font-size: 30px;
+    }
+    #about p {
+        font-size: 22.5px;
+    }
+    footer {
+      letter-spacing: 1.5px;
+      font-size: 25px;
+      height: 37.5px;
+    }
+    footer li, .copyright {
+      transform: translateY(4px);
+    }
+}
+  
+/* SMALLER TABLETS */
+@media (width <= 768px) and (height <= 1024px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 75px;
+    }
+    .label {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .dropdownContent {
+        transform: translateY(75px);
+        margin-left: -220px;
+        width: 420px;
+        min-width: 420px;
+        font-size: 17.5px;
+    }
+    .dropdownContent a {
+        letter-spacing: 0px;
+        padding: 3px 0;
+    }
+    .collapsible {
+        font-size: 20px;
+    }
+    .content {
+        font-size: 20px;
+        transform: translateY(65px);
+    }
+    .game {
+        margin-top: 18%;
+    }
+    .button {
+        font-size: 35px;
+    }
+    .about {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    #about h2 {
+        font-size: 30px;
+    }
+    #about p {
+        font-size: 25px;
+    }
+    footer {
+      letter-spacing: 1.5px;
+      font-size: 20px;
+      height: 30px;
+    }
+    footer li, .copyright {
+      transform: translateY(1px);
+    }
+}
+
+/* LANDSCAPE PHONES */
+@media (width <= 932px) and (height <= 430px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 50px;
+    }
+    .label {
+        font-size: 17.5px;
+        margin-top: 12.5px;
+    }
+    .dropdownContent {
+        transform: translateY(50px);
+        margin-left: -280px;
+    }
+    .collapsible {
+        font-size: 20px;
+    }
+    .content {
+        font-size: 18.5px;
+    }
+    .game {
+        margin-top: 12%;
+    }
+    .button {
+        font-size: 30px;
+    }
+    button {
+        height: 80px;
+    }
+    .about {
+        margin-top: 3%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    #about h2 {
+        font-size: 25px;
+    }
+    #about p {
+        font-size: 20px;
+    }
+    footer {
+      font-size: 12.5px;
+      height: 17.5px;
+    }
+    footer li {
+      padding: 6px;
+    }
+    .copyright {
+      transform: translateY(-3px);
+    }
+}
+  
+/* SURFACE PRO */
+@media (width = 912px) and (height = 1368px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 100px;
+    }
+    .label {
+        font-size: 30px;
+        margin-top: 25px;
+    }
+    .dropdownContent {
+        transform: translateY(100px);
+        margin-left: -300px;
+    }
+    .dropdownContent a {
+        font-size: 25px;
+    }
+    .collapsible {
+        height: 100px;
+        font-size: 30px;
+    }
+    .content {
+        font-size: 25px;
+        transform: translateY(105px);
+    }
+    .game {
+        margin-top: 18%;
+    }
+    .button {
+        font-size: 40px;
+    }
+    .about {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    #about h2 {
+        font-size: 40px;
+    }
+    #about p {
+        font-size: 30px;
+    }
+    footer {
+      letter-spacing: 1.5px;
+      font-size: 25px;
+      height: 37.5px;
+    }
+    footer li, .copyright {
+      transform: translateY(4px);
+    }
+}
+  
+/* SURFACE DUO  */
+@media (width = 540px) and (height = 720px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 50px;
+    }
+    #nav .row > .col-sm-4 {
+        display: none;
+    }
+    .combined-dropdown {
+        display: block !important;
+    }
+    .dropdownContent {
+      display: none;
+    }
+    .dropdownContent.show {
+      display: block;
+    }
+    .label {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .dropdownContent {
+        transform: translateY(50px);
+        margin-left: -270px;
+        font-size: 15px;
+    }
+    .dropdownContent a {
+        padding: 3px 0;
+        letter-spacing: 1px;
+    }
+    .collapsible {
+        height: 50px;
+        font-size: 15px;
+    }
+    .content {
+        font-size: 15px;
+        transform: translateY(55px);
+    }
+    .game {
+        margin-top: 18%;
+    }
+    #result-message {
+        font-size: 20px;
+    }
+    .about {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #about h2 {
+        font-size: 20px;
+    }
+    #about p {
+        font-size: 17.5px;
+    }
+    footer {
+      font-size: 12.5px;
+      height: 17.5px;
+    }
+    footer li {
+      padding: 6px;
+    }
+    .copyright {
+      transform: translateY(-3px);
+    }
+}
+  
+/* IPHONE SCREENS */
+@media (width <= 450px) and (height <= 996px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 50px;
+    }
+    #nav .row > .col-sm-4 {
+        display: none;
+    }
+    .combined-dropdown {
+        display: block !important;
+    }
+    .dropdownContent {
+      display: none;
+    }
+    .dropdownContent.show {
+      display: block;
+    }
+    .label {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .dropdownContent {
+        transform: translateY(50px);
+        margin-left: -240px;
+        font-size: 15px;
+        width: 420px;
+        min-width: 420px;
+    }
+    .dropdownContent a {
+        padding: 3px 0;
+        letter-spacing: 1px;
+    }
+    .collapsible {
+        height: 50px;
+        font-size: 15px;
+    }
+    .content {
+        font-size: 15px;
+        transform: translateY(55px);
+    }
+    .game {
+        margin-top: 18%;
+    }
+    .button {
+        font-size: 30px;
+    }
+    #result-message {
+        font-size: 20px;
+    }
+    .about {
+        width: 70%;
+        margin-left: 15%;
+    }
+    #about h2 {
+        font-size: 25px;
+    }
+    #about p {
+        font-size: 20px;
+    }
+    footer {
+      height: 25px;
+      font-size: 17.5px;
+      letter-spacing: normal;
+    }
+    footer li {
+      margin-left: 8%;
+      padding-left: 0px;
+      padding-right: 0px; 
+    }
+    .copyright {
+      display: none;
+    }
+}
+  
+/* LARGE MOBILE SCREENS */
+@media (width <= 425px) and (height <= 1024px) {
+    html, body {
+        height: 100vh;
+        width: 100vw;
+      }
+      #nav, #navOption {
+          height: 50px;
+      }
+      #nav .row > .col-sm-4 {
+          display: none;
+      }
+      .combined-dropdown {
+          display: block !important;
+      }
+      .dropdownContent {
+        display: none;
+      }
+      .dropdownContent.show {
+        display: block;
+      }
+      .label {
+          font-size: 15px;
+          margin-top: 15px;
+      }
+      .dropdownContent {
+          transform: translateY(50px);
+          margin-left: -240px;
+          font-size: 15px;
+          width: 420px;
+          min-width: 420px;
+      }
+      .dropdownContent a {
+          padding: 3px 0;
+          letter-spacing: 1px;
+      }
+      .collapsible {
+          height: 50px;
+          font-size: 15px;
+      }
+      .content {
+          font-size: 15px;
+          transform: translateY(55px);
+      }
+      .game {
+          margin-top: 18%;
+      }
+      .button {
+          font-size: 30px;
+      }
+      #result-message {
+          font-size: 20px;
+      }
+      .about {
+          width: 70%;
+          margin-left: 15%;
+      }
+      #about h2 {
+          font-size: 25px;
+      }
+      #about p {
+          font-size: 20px;
+      }
+      footer {
+        height: 25px;
+        font-size: 17.5px;
+        letter-spacing: normal;
+      }
+      footer li {
+        margin-left: 8%;
+        padding-left: 0px;
+        padding-right: 0px; 
+      }
+      .copyright {
+        display: none;
+      }
+}
+
+/* MEDIUM MOBILE SCREENS */
+@media (width <= 360px) and (height <= 740px) {
+    html, body {
+      height: 100vh;
+      width: 100vw;
+    }
+    #nav, #navOption {
+        height: 50px;
+    }
+    #nav .row > .col-sm-4 {
+        display: none;
+    }
+    .combined-dropdown {
+        display: block !important;
+    }
+    .dropdownContent {
+      display: none;
+    }
+    .dropdownContent.show {
+      display: block;
+    }
+    .label {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .dropdownContent {
+        transform: translateY(50px);
+        margin-left: -200px;
+        font-size: 15px;
+        width: 340px;
+        min-width: 340px;
+    }
+    .dropdownContent a {
+        padding: 3px 0;
+        letter-spacing: 1px;
+    }
+    .collapsible {
+        height: 50px;
+        font-size: 13px;
+    }
+    .content {
+        font-size: 13px;
+        transform: translateY(52px);
+    }
+    .game {
+        margin-top: 22%;
+    }
+    button {
+        height: 80px;
+    }
+    .button {
+        font-size: 20px;
+    }
+    #result-message {
+        font-size: 15px;
+    }
+    .about {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #about h2 {
+        font-size: 20px;
+    }
+    #about p {
+        font-size: 15px;
+    }
+    footer li {
+      margin-left: 5%;
+      padding-left: 0px;
+      padding-right: 0px; 
+    }
+    .copyright {
+      display: none;
+    }
+}
+  
+/* SMALL MOBILE SCREENS */
+@media (width <= 280px) and (height <= 653px) {
+    html, body {
+    height: 100vh;
+    width: 100vw;
+    }
+    #nav, #navOption {
+        height: 50px;
+    }
+    #nav .row > .col-sm-4 {
+        display: none;
+    }
+    .combined-dropdown {
+        display: block !important;
+    }
+    .dropdownContent {
+    display: none;
+    }
+    .dropdownContent.show {
+    display: block;
+    }
+    .label {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .dropdownContent {
+        transform: translateY(50px);
+        margin-left: -160px;
+        font-size: 12.5px;
+        width: 260px;
+        min-width: 260px;
+    }
+    .dropdownContent a {
+        padding: 3px 0;
+        letter-spacing: 1px;
+    }
+    .collapsible {
+        height: 50px;
+        font-size: 13px;
+    }
+    .content {
+        font-size: 13px;
+        transform: translateY(52px);
+    }
+    .game {
+        margin-top: 25%;
+    }
+    button {
+        height: 80px;
+    }
+    .button {
+        font-size: 20px;
+    }
+    #result-message {
+        font-size: 15px;
+    }
+    .about {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #about h2 {
+        font-size: 20px;
+    }
+    #about p {
+        font-size: 15px;
+    }
+    footer {
+      font-size: 12.5px;
+      height: 20px;
+    }
+    footer li {
+      padding: 4px;
+      margin-top: 3px;
+    }
+    .copyright {
+      display: none;
+    }
+}

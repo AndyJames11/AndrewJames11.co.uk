@@ -110,6 +110,8 @@ This project is built as part of my portfolio to demonstrate the skills I have l
 3. **Football Position Visibility**: Some positions incorrectly remain visible when switching between formations. ***Fixed 29/05/2024***
 4. **Sweepstake**: The reset button does not work correctly. It resets the text to white, the content to the football positions, and some of the content to undefined and also does not remove the highlighting on some of the content. ***Fixed 03/06/2024***
 5. **JS-Index Page**: The page sometimes displayed incorrectly on smaller devices. The entire HTML content would be shrunk into the corner, and excess incorrect content would display in the rest of the screen. ***Fixed 11/06/2024***  
+6. **Navbar Content**: Sometimes when closing one dropdown menu and opening a new one, the new one will close.
+7. **Reaction Page 'About' Section**: On some smaller devices, the bottom of the 'About' section can sometimes appear cut off.
 
 ## Deployment
 ### GitHub Pages

@@ -12,62 +12,97 @@
 </head>
 
 <body>
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-sm">
-        <p class="label">Test 1</p>
-        <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
-        <div class="dropdownContent" id="dropdown1">
-          <a href="../league.html">League of Legends Role/Champion Randomiser</a>
-          <a href="../positions.html">Football Positions Randomiser</a>
-          <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+  <div id="nav">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Randomisers</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown1">
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Other Pages</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown2">
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <a href="../js-index.html" class="label">Home Page</a>
         </div>
       </div>
-      <div class="col-sm">
-        <p class="label">Test 2</p>
-        <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
-        <div class="dropdownContent" id="dropdown2">
-          <a href="../convertor.html">Currency Convertor</a>
-          <a href="../reaction-test.html">Reaction Test Game</a>
-        </div>
-      </div>
-      <div class="col-sm">
-        <p class="label">Home</p>
-        <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
-        <div class="dropdownContent" id="dropdown2">
-          <a href="../index.html">Home Page</a>
-          <a href="../js-index.html">JavaScript Home Page</a>
+      <div class="row justify-content-center combined-dropdown" id="combinedDropdown">
+        <div class="col-sm-12" id="navOption">
+          <p class="label">Menu</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrowCombined" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdownCombined">
+            <a href="../js-index.html">Home Page</a>
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div id="description">
-    <button type="button" class="collapsible">Click here for a description of this page</button>
+    <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
     <div class="content">
-      <p>This page features the dropdown navigation menu which users can acess by clicking the arrow. It also features a reaction test game where the user is prompted to click the button and then as soon as the button turns green, click it again. Then the score is caclulated by how long it took for the user to click the button after it became green.</p>
+      <p>This page features a dropdown navigation menu which users can acess by clicking the arrow. It also features a reaction test game where the user is prompted to click the button and then as soon as the button turns green, click it again. Then the score is caclulated by how long it took for the user to click the button after it became green.</p>
     </div>
   </div>
 
-  <div id="container">
-    <div id="instructions">
+  <div id="container" class="game">
+    <!-- <div id="instructions">
       <p>Click the button below to being the reaction test. When the button changes to green, click it again! Your time will be displayed below. Good luck!</p>
-    </div>
+    </div> -->
     <div id="default-state">
-        <button id="start-button" onclick="reactionTest()">Click me to begin reaction test!</button>
+        <button id="start-button" class="button" onclick="reactionTest()">Click me to begin reaction test!</button>
     </div>
-    <div id="first-click" style="display: none;">
-        <button id="delay-button" style="background-color: red; color: white; text-shadow: 0px 0px 1px black;">Click me when the button turns green!</button>
+    <div id="first-click" class="button" style="display: none;">
+        <button id="delay-button" style="background-color: red; color: white; text-shadow: 0px 0px 1px black;">Wait for green!</button>
     </div>
-    <div id="second-click" style="display: none;">
-        <button id="result-button" style="background-color: green; color: white; text-shadow: 0px 0px 1px black;">Click now!</button>
+    <div id="second-click" class="button" style="display: none;">
+        <button id="result-button" style="background-color: green; color: white; text-shadow: 0px 0px 1px black;">Click!</button>
     </div>
-    <div id="try-again" style="display: none">
-        <button onclick="location.reload()">Try Again!</button> <!-- Reloads page when button is clicked -->
+    <div id="try-again" class="button" style="display: none">
+        <button onclick="location.reload()">Play Again!</button> <!-- Reloads page when button is clicked -->
     </div>
         <p id="result-message"></p>
     </div>
 </div>
+
+<div id="containter text-center" class="about">
+  <div id="row justify-content-center">
+    <div id="col">
+      <div id="about">
+        <h2>About the test</h2>
+        <p>This is a simple tool to measure your reaction time.</p>
+        <p>The average (median) reaction time is 273 milliseconds, according to the data collected so far.</p>
+        <p>In addition to measuring your reaction time, this test is affected by the latency of your computer and monitor. Using a fast computer and low latency / high framerate monitor will improve your score.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <ul>
+    <li class="socials"><a href="https://www.linkedin.com/in/andrew-h-788807124/" target="_blank" class="linkedin">LinkedIn<span></span><i class="fa-brands fa-linkedin"></i></a></li>
+    <li class="socials"><a href="https://github.com/AndyJames11" target="_blank" class="github">Github<span></span><i class="fa-brands fa-github"></i></a></li>
+    <li class="socials"><a href="https://www.youtube.com/@andrewjames1167" target="_blank" class="youtube">YouTube<span></span><i class="fa-brands fa-youtube"></i></a></li>
+    <li class="copyright"><p>© 2024 AndrewJamesCo</p></li>
+  </ul>
+</footer>
 
   <script src="../js/script.js"></script>
 
