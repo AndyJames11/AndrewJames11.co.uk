@@ -88,6 +88,64 @@ h3 {
     padding-bottom: 15px;
 }
 
+/* Collapsible Description Box */
+#description {
+}
+
+.collapsible {
+  text-align: center;
+  background-color: rgb(180, 230, 250);
+  border: 1px solid rgb(180, 230, 250);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #888888;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 18px;
+  width: 75%;
+  height: 60px;
+  left: 50%;
+  margin-left: -37.5%;
+  position: absolute;
+  z-index: 1;
+}
+
+.active, .collapsible:hover {
+  transition: all .1s linear;
+  background-color: rgb(180, 230, 250);
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.collapsible:after {
+  content: '\002B'; /* This is the unicode for the '+' symbol */
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* This is the unicode for the '-' symbol */
+}
+
+.content {
+  position: absolute;
+  padding: 0px 5px;
+  max-height: 0;
+  overflow: hidden;
+  width: 75%;
+  left: 50%;
+  margin-left: -37.5%;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(180, 230, 250);
+  box-shadow: 2px 2px 5px #888888;
+  transform: translateY(65px);
+  border: 0 solid black;
+  z-index: 1;
+}
+
 /* All randomiser and reset buttons */
 .randomButtons, #resetButtons {
     display: inline-block;
@@ -145,7 +203,7 @@ h3 {
     max-width: 1200px;
     height: auto;
     position: relative;
-    margin-top: 10px;
+    margin-top: 80px;
 }
 
 .container img {
