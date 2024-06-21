@@ -9,23 +9,19 @@ function randRole() { // Defines an array and chooses a random item when the but
 }
 
 function resetLoL() { // Resets elements back to original state when clicked
-    let champs = document.getElementsByClassName('champText');
-    for (let i = 0; i < champs.length; i++) {
-        champs[i].innerHTML = "";
-    }
     document.getElementById("randRoleButton").innerHTML = "Random role";
 }
 
 function randTop() {// Defines an array and chooses a random item when the button is clicked
     let topArray = [
-        "Aatrox", "Akali", "Akshan", "Alistar", "Amumu", "Ashe", "Blitzcrank", 
-        "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Darius", "Draven", 
-        "Dr. Mundo", "Ezreal", "Fiora", "Fizz", "Gangplank", "Garen", "Gnar", 
-        "Gragas", "Gwen", "Illaoi", "Irelia", "Jax", "Jayce", "Kayle", "Kennen", 
-        "Kled", "K'Sante", "Lee Sin", "Lucian", "Malphite", "Maokai", "Mordekaiser", 
-        "Nasus", "Nidalee", "Olaf", "Ornn", "Pantheon", "Poppy", "Quinn", "Renekton", 
-        "Rengar", "Riven", "Rumble", "Sett", "Shen", "Singed", "Sion", "Teemo", 
-        "Trundle", "Tryndamere", "Urgot", "Vayne", "Volibear", "Wukong", "Yasuo", 
+        "Aatrox", "Akali", "Akshan", "Alistar", "Amumu", "Ashe", "Blitzcrank",
+        "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Darius", "Draven",
+        "Dr. Mundo", "Ezreal", "Fiora", "Fizz", "Gangplank", "Garen", "Gnar",
+        "Gragas", "Gwen", "Illaoi", "Irelia", "Jax", "Jayce", "Kayle", "Kennen",
+        "Kled", "K'Sante", "Lee Sin", "Lucian", "Malphite", "Maokai", "Mordekaiser",
+        "Nasus", "Nidalee", "Olaf", "Ornn", "Pantheon", "Poppy", "Quinn", "Renekton",
+        "Rengar", "Riven", "Rumble", "Sett", "Shen", "Singed", "Sion", "Teemo",
+        "Trundle", "Tryndamere", "Urgot", "Vayne", "Volibear", "Wukong", "Yasuo",
         "Yone", "Yorick", "Zac", "Zed"
     ];
     let randomTop = topArray[Math.floor(Math.random() * topArray.length)];
@@ -35,26 +31,26 @@ function randTop() {// Defines an array and chooses a random item when the butto
 
 function randJung() { // Defines an array and chooses a random item when the button is clicked
     let jungArray = [
-        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", 
-        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank", 
-        "Brand", "Braum", "Briar", "Camille", "Cassiopeia", "Cho'Gath", "Corki", 
-        "Darius", "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Evelynn", "Ezreal", 
-        "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", 
-        "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Hwei", "Illaoi", 
-        "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Kai'Sa", 
-        "Kalista", "Karma", "Karthus", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", 
-        "Kled", "K'Sante", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", 
-        "Lucian", "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune", 
-        "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko", 
-        "Nidalee", "Nilah", "Nocturne", "Nunu & Willump", "Olaf", "Ornn", "Pantheon", 
-        "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", "Rell", 
-        "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", 
-        "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", 
-        "Sion", "Skarner", "Smoulder", "Sona", "Swain", "Sylas", "Syndra", "Tahm Kench", 
-        "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle", 
-        "Tryndamere", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", 
-        "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", 
-        "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", 
+        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie",
+        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank",
+        "Brand", "Braum", "Briar", "Camille", "Cassiopeia", "Cho'Gath", "Corki",
+        "Darius", "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Evelynn", "Ezreal",
+        "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar",
+        "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Hwei", "Illaoi",
+        "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Kai'Sa",
+        "Kalista", "Karma", "Karthus", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred",
+        "Kled", "K'Sante", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra",
+        "Lucian", "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune",
+        "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko",
+        "Nidalee", "Nilah", "Nocturne", "Nunu & Willump", "Olaf", "Ornn", "Pantheon",
+        "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", "Rell",
+        "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira",
+        "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed",
+        "Sion", "Skarner", "Smoulder", "Sona", "Swain", "Sylas", "Syndra", "Tahm Kench",
+        "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle",
+        "Tryndamere", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne",
+        "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear",
+        "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick",
         "Zac", "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra"
     ];
     let randomJung = jungArray[Math.floor(Math.random() * jungArray.length)];
@@ -64,28 +60,28 @@ function randJung() { // Defines an array and chooses a random item when the but
 
 function randMid() { // Defines an array and chooses a random item when the button is clicked
     let midArray = [
-        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", 
-        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank", 
-        "Brand", "Braum", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", 
-        "Corki", "Darius", "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Evelynn", 
-        "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", 
-        "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Hwei", 
-        "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", 
-        "Jinx", "Kai'Sa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina", 
-        "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", "K'Sante", 
+        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie",
+        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank",
+        "Brand", "Braum", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath",
+        "Corki", "Darius", "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Evelynn",
+        "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen",
+        "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Hwei",
+        "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin",
+        "Jinx", "Kai'Sa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina",
+        "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", "K'Sante",
         "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu",
-        "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune", 
-        "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko", 
-        "Nidalee", "Nilah", "Nocturne", "Nunu & Willump", "Olaf", "Orianna", "Ornn", 
-        "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", 
-        "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", 
-        "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", 
-        "Singed", "Sion", "Sivir", "Skarner", "Smoulder", "Sona", "Soraka", "Swain", 
-        "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo", 
-        "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch", 
-        "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", 
-        "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath", 
-        "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac", "Zed", "Zeri", "Ziggs", "Zilean", 
+        "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune",
+        "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko",
+        "Nidalee", "Nilah", "Nocturne", "Nunu & Willump", "Olaf", "Orianna", "Ornn",
+        "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai",
+        "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze",
+        "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana",
+        "Singed", "Sion", "Sivir", "Skarner", "Smoulder", "Sona", "Soraka", "Swain",
+        "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo",
+        "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch",
+        "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego",
+        "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath",
+        "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac", "Zed", "Zeri", "Ziggs", "Zilean",
         "Zoe", "Zyra"
     ];
     let randomMid = midArray[Math.floor(Math.random() * midArray.length)];
@@ -95,20 +91,20 @@ function randMid() { // Defines an array and chooses a random item when the butt
 
 function randBot() { // Defines an array and chooses a random item when the button is clicked
     let botArray = [
-        "Aatrox", "Ahri", "Akali", "Akshan", "Amumu", "Anivia", "Aphelios", "Ashe", 
-        "Azir", "Bard", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Corki", "Darius", 
-        "Diana", "Draven", "Ekko", "Ezreal", "Fiora", "Fizz", "Gangplank", "Garen", 
-        "Gnar", "Gragas", "Gwen", "Heimerdinger", "Hwei", "Illaoi", "Irelia", "Janna", 
-        "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "Kai'Sa", "Kalista", "Katarina", 
-        "Kayn", "Kennen", "Kindred", "Kled", "Kog'Maw", "K'Sante", "LeBlanc", "Lee Sin", 
-        "Lillia", "Lissandra", "Lucian", "Malzahar", "Master Yi", "Miss Fortune", 
-        "Mordekaiser", "Naafiri", "Nasus", "Nidalee", "Nilah", "Nocturne", "Olaf", 
-        "Orianna", "Ornn", "Pantheon", "Poppy", "Qiyana", "Quinn", "Rek'Sai", "Renekton", 
-        "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Sett", 
-        "Shyvana", "Sivir", "Smoulder", "Sylas", "Syndra", "Taliyah", "Talon", "Teemo", 
-        "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch", 
-        "Urgot", "Varus", "Vayne", "Veigar", "Vex", "Vi", "Viego", "Viktor", "Volibear", 
-        "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", 
+        "Aatrox", "Ahri", "Akali", "Akshan", "Amumu", "Anivia", "Aphelios", "Ashe",
+        "Azir", "Bard", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Corki", "Darius",
+        "Diana", "Draven", "Ekko", "Ezreal", "Fiora", "Fizz", "Gangplank", "Garen",
+        "Gnar", "Gragas", "Gwen", "Heimerdinger", "Hwei", "Illaoi", "Irelia", "Janna",
+        "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "Kai'Sa", "Kalista", "Katarina",
+        "Kayn", "Kennen", "Kindred", "Kled", "Kog'Maw", "K'Sante", "LeBlanc", "Lee Sin",
+        "Lillia", "Lissandra", "Lucian", "Malzahar", "Master Yi", "Miss Fortune",
+        "Mordekaiser", "Naafiri", "Nasus", "Nidalee", "Nilah", "Nocturne", "Olaf",
+        "Orianna", "Ornn", "Pantheon", "Poppy", "Qiyana", "Quinn", "Rek'Sai", "Renekton",
+        "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Sett",
+        "Shyvana", "Sivir", "Smoulder", "Sylas", "Syndra", "Taliyah", "Talon", "Teemo",
+        "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch",
+        "Urgot", "Varus", "Vayne", "Veigar", "Vex", "Vi", "Viego", "Viktor", "Volibear",
+        "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick",
         "Zac", "Zed", "Zeri", "Ziggs", "Zilean"
     ];
     let randomBot = botArray[Math.floor(Math.random() * botArray.length)];
@@ -118,27 +114,27 @@ function randBot() { // Defines an array and chooses a random item when the butt
 
 function randSupp() { // Defines an array and chooses a random item when the button is clicked
     let suppArray = [
-        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", 
-        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Blitzcrank", "Brand", 
-        "Braum", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Darius", 
-        "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Fiddlesticks", "Fiora", 
-        "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen", 
-        "Hecarim", "Heimerdinger", "Hwei", "Illaoi", "Irelia", "Ivern", "Janna", 
-        "Jarvan IV", "Jax", "Jayce", "Kalista", "Karma", "Karthus", "Kassadin", 
-        "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", 
-        "K'Sante", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lulu", "Lux", 
-        "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Milio", "Mordekaiser", 
-        "Morgana", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nunu & Willump", 
-        "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", 
-        "Rakan", "Rammus", "Rell", "Renata Glasc", "Renekton", "Rengar", "Ryze", "Sejuani", 
-        "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Skarner", 
-        "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", 
-        "Taric", "Teemo", "Thresh", "Trundle", "Tryndamere", "Twisted Fate", "Twitch", 
-        "Varus", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Volibear", 
-        "Warwick", "Wukong", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac", 
+        "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie",
+        "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Blitzcrank", "Brand",
+        "Braum", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Darius",
+        "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", "Fiddlesticks", "Fiora",
+        "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen",
+        "Hecarim", "Heimerdinger", "Hwei", "Illaoi", "Irelia", "Ivern", "Janna",
+        "Jarvan IV", "Jax", "Jayce", "Kalista", "Karma", "Karthus", "Kassadin",
+        "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw",
+        "K'Sante", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lulu", "Lux",
+        "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Milio", "Mordekaiser",
+        "Morgana", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nunu & Willump",
+        "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn",
+        "Rakan", "Rammus", "Rell", "Renata Glasc", "Renekton", "Rengar", "Ryze", "Sejuani",
+        "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Skarner",
+        "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon",
+        "Taric", "Teemo", "Thresh", "Trundle", "Tryndamere", "Twisted Fate", "Twitch",
+        "Varus", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Volibear",
+        "Warwick", "Wukong", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac",
         "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra"
     ];
-    var randomSupp = supArray[Math.floor(Math.random() * suppArray.length)];
+    let randomSupp = supArray[Math.floor(Math.random() * suppArray.length)];
     alert(randomSupp); // Displays alert with selected item from the array
     // document.getElementById("suppText").innerHTML = randomSupp;
 }
@@ -152,7 +148,7 @@ let originalBorder = [];
 
 // Stores the styling and text of the elements at the point the page is loaded
 document.addEventListener("DOMContentLoaded", function() {
-    const positionElements = document.getElementsByClassName('position');
+    const positionElements = document.getElementsByClassName("position");
     for (let i = 0; i < positionElements.length; i++) {
         originalContent.push(positionElements[i].innerHTML);
         originalColor.push(positionElements[i].style.backgroundColor);
@@ -164,7 +160,7 @@ let counter = 0; // Starts a counter to prevent the same position being allocate
 
 function randPos() { // If all positions are taken, do not display a new position and instead display an alert
     let posArray = getVisiblePositions(); // If the background color is yellow, the position is filled
-    const filledPositions = Array.from(document.getElementsByClassName('position')).filter(pos => pos.style.backgroundColor === 'yellow');
+    const filledPositions = Array.from(document.getElementsByClassName("position")).filter(pos => pos.style.backgroundColor === "yellow");
 
     if (filledPositions.length === posArray.length) {
         alert("All positions are filled!");
@@ -174,11 +170,11 @@ function randPos() { // If all positions are taken, do not display a new positio
     let random; // If the math.random selects a position which has a yellow background, run the math.random again
     do {
         random = posArray[Math.floor(Math.random() * posArray.length)];
-    } while (document.getElementById(random).style.backgroundColor === 'yellow');
+    } while (document.getElementById(random).style.backgroundColor === "yellow");
 
     const position = document.getElementById(random);
 
-    let personName = '';
+    let personName = "";
     while (!personName) { // Ask for a name. If the name is blank or with just a spacebar, ask for a valid name
         personName = prompt("Enter the person's name:").trim();
         if (!personName) {
@@ -193,7 +189,7 @@ function randPos() { // If all positions are taken, do not display a new positio
 }
 
 function clearPos() { // Reset all elements back to original state
-    const positionElements = document.getElementsByClassName('position');
+    const positionElements = document.getElementsByClassName("position");
     for (let i = 0; i < positionElements.length; i++) {
         positionElements[i].innerHTML = originalContent[i];
         positionElements[i].style.backgroundColor = originalColor[i];
@@ -283,10 +279,10 @@ function setPositions(positions) { // Ensures elements are visible/not visible w
     for (const [position, { top, left, text, visible }] of Object.entries(positions)) {
         const element = document.getElementById(position);
         if (visible === false) {
-            element.style.display = 'none';
+            element.style.display = "none";
         } else {
-            element.style.display = 'block';
-            element.style.position = 'absolute';
+            element.style.display = "block";
+            element.style.position = "absolute";
             element.style.top = top;
             element.style.left = left;
             element.innerText = text;
@@ -295,7 +291,7 @@ function setPositions(positions) { // Ensures elements are visible/not visible w
 }
 
 function resetStyles() { // Resets styling back to default state
-    const positionElements = document.getElementsByClassName('position');
+    const positionElements = document.getElementsByClassName("position");
     for (let i = 0; i < positionElements.length; i++) {
         positionElements[i].innerHTML = originalContent[i];
         positionElements[i].style.backgroundColor = originalColor[i];
@@ -305,9 +301,9 @@ function resetStyles() { // Resets styling back to default state
 
 function getVisiblePositions() { // Checks which positions are displayed so the correct position is filled
     const visiblePositions = [];
-    const positionElements = document.getElementsByClassName('position');
+    const positionElements = document.getElementsByClassName("position");
     for (let i = 0; i < positionElements.length; i++) {
-        if (positionElements[i].style.display !== 'none') {
+        if (positionElements[i].style.display !== "none") {
             visiblePositions.push(positionElements[i].id);
         }
     }
@@ -323,7 +319,7 @@ let originalCountryBorder = [];
 
 // Stores the styling and text of the elements at the point the page is loaded
 document.addEventListener("DOMContentLoaded", function() {
-    const countryElements = document.getElementsByClassName('country');
+    const countryElements = document.getElementsByClassName("country");
     for (let i = 0; i < countryElements.length; i++) {
         originalCountryContent.push(countryElements[i].innerHTML);
         originalCountryColor.push(countryElements[i].style.backgroundColor);
@@ -332,12 +328,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let countriesArray = [ // Stores countries in an array to be called from later
-    "Germany", "Scotland", "Hungary", "Switzerland", 
-    "Spain", "Croatia", "Italy", "Albania", 
-    "Slovenia", "Denmark", "Serbia", "England", 
-    "Poland", "Netherlands", "Austria", "France", 
-    "Belgium", "Slovakia", "Romania", "Ukraine", 
-    "Turkey", "Georgia", "Portugal", "Czech Republic"];
+    "Germany", "Scotland", "Hungary", "Switzerland",
+    "Spain", "Croatia", "Italy", "Albania",
+    "Slovenia", "Denmark", "Serbia", "England",
+    "Poland", "Netherlands", "Austria", "France",
+    "Belgium", "Slovakia", "Romania", "Ukraine",
+    "Turkey", "Georgia", "Portugal", "Czechia"];
 let assignedCountries = [];
 
 function Sweepstake() { // If all countries assigned, display an alert
@@ -366,7 +362,7 @@ function Sweepstake() { // If all countries assigned, display an alert
 }
 
 function resetSweepstake() {
-    const countryElements = document.getElementsByClassName('country');
+    const countryElements = document.getElementsByClassName("country");
     for (let i = 0; i < countryElements.length; i++) {
         countryElements[i].innerHTML = originalCountryContent[i];
         countryElements[i].style.backgroundColor = originalCountryColor[i];
@@ -379,7 +375,7 @@ function resetSweepstake() {
 // API key required for getting conversion rates from v6.exchangerate-api.com
 const apiKey = "307f81c5347b7086b868c498";
 
-// Retrieves values from the form. 
+// Retrieves values from the form.
 let currencyAmount = document.getElementById("currencyAmount"); // ID of amount to convert field
 let currencyFrom = document.getElementById("currencyFrom"); // ID for 'From' field 
 let currencyTo = document.getElementById("currencyTo"); // ID for 'To' field
@@ -389,8 +385,8 @@ let result = document.getElementById("finalValue"); // ID of the result field
 function Convert() {
     let fromCurrency = currencyFrom.value; // Obtains currency selected in 'From' field
     let toCurrency = currencyTo.value; // Obtains currency selected in 'To' field
-    let amount = parseFloat(currencyAmount.value); // Converts value in 'amount' field to a 'floating-point number'. 
-    // JavaScript may interpret inputs in this field as Strings even if they are numbers. 
+    let amount = parseFloat(currencyAmount.value); // Converts value in 'amount' field to a 'floating-point number'.
+    // JavaScript may interpret inputs in this field as Strings even if they are numbers.
     // This is likely not necessary but I read online that this is considered good practice
 
     // If input is not a number (NaN) an alert appears asking to enter a valid number
@@ -399,7 +395,7 @@ function Convert() {
         return;
     }
 
-    // Obtains current conversion rates from the currency converter API. 
+    // Obtains current conversion rates from the currency converter API.
     fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`)
     .then(response => response.json())
     .then(data => {
@@ -410,7 +406,7 @@ function Convert() {
         }
     })
     .catch(error => {
-        console.error('Error fetching the exchange rate:', error);
+        console.error("Error fetching the exchange rate:", error);
         result.innerHTML = "Sorry, something went wrong.";
     });
 };
@@ -419,7 +415,7 @@ function clearVal() { // Resets input fields
     currencyAmount.value = "";
     currencyFrom.value = "Select One";
     currencyTo.value = "Select One";
-    
+
     result.innerHTML = ""; // Clears the result display
 }
 
@@ -442,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    Array.from(dropdownArrows).forEach((arrow) => { // Creates an array from each dropdownArrow so it can be iterated over 
+    Array.from(dropdownArrows).forEach((arrow) => { // Creates an array from each dropdownArrow so it can be iterated over
         arrow.addEventListener("click", function(event) { // Run the function when the arrow is clicked
             event.stopPropagation(); // This ensures that clicking the arrow does not trigger the click event to closeOpenDropdowns
             const dropdownList = arrow.nextElementSibling; // Selects the next sibling of the clicked arrow.
@@ -484,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let accordian = document.getElementsByClassName("collapsible"); // Define the variable 'accordian' and link to .collapsible element
 let i;
 
-for (i = 0; i < accordian.length; i++) { 
+for (i = 0; i < accordian.length; i++) {
   accordian[i].addEventListener("click", function() {
     this.classList.toggle("active"); // Adds/removes '.active' class to the element on click
     let content = this.nextElementSibling; // Links 'content' to the next sibling of '.collapsible' which in this case is the 'p' element

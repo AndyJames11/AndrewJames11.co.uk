@@ -63,9 +63,6 @@
   </div>
 
   <div id="container" class="game">
-    <!-- <div id="instructions">
-      <p>Click the button below to being the reaction test. When the button changes to green, click it again! Your time will be displayed below. Good luck!</p>
-    </div> -->
     <div id="default-state">
         <button id="start-button" class="button" onclick="reactionTest()">Click me to begin reaction test!</button>
     </div>
@@ -78,12 +75,13 @@
     <div id="try-again" class="button" style="display: none">
         <button onclick="location.reload()">Play Again!</button> <!-- Reloads page when button is clicked -->
     </div>
+    <div>
         <p id="result-message"></p>
     </div>
-</div>
+  </div>
 
-<div id="containter text-center" class="about">
-  <div id="row justify-content-center">
+<div class="containter text-center" id="aboutContainer">
+  <div class="row justify-content-center">
     <div id="col">
       <div id="about">
         <h2>About the test</h2>

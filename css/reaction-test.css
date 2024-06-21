@@ -151,7 +151,7 @@ button {
     font-weight: 600;
 }
 
-.about {
+#aboutContainer {
     width: 50%;
     left: 50%;
     margin-left: 25%;
@@ -281,7 +281,7 @@ footer li {
     .game {
         margin-top: 17%;
     }
-    .about {
+    #aboutContainer {
         margin-top: 8%;
         width: 70%;
         margin-left: 15%;
@@ -339,7 +339,7 @@ footer li {
     .button {
         font-size: 35px;
     }
-    .about {
+    #aboutContainer {
         width: 80%;
         margin-left: 10%;
         margin-top: 5%;
@@ -392,7 +392,7 @@ footer li {
     button {
         height: 80px;
     }
-    .about {
+    #aboutContainer {
         margin-top: 3%;
         width: 80%;
         margin-left: 10%;
@@ -449,7 +449,7 @@ footer li {
     .button {
         font-size: 40px;
     }
-    .about {
+    #aboutContainer {
         width: 80%;
         margin-left: 10%;
         margin-top: 5%;
@@ -518,7 +518,7 @@ footer li {
     #result-message {
         font-size: 20px;
     }
-    .about {
+    #aboutContainer {
         width: 80%;
         margin-left: 10%;
     }
@@ -593,7 +593,7 @@ footer li {
     #result-message {
         font-size: 20px;
     }
-    .about {
+    #aboutContainer {
         width: 70%;
         margin-left: 15%;
     }
@@ -671,7 +671,7 @@ footer li {
       #result-message {
           font-size: 20px;
       }
-      .about {
+      #aboutContainer {
           width: 70%;
           margin-left: 15%;
       }
@@ -752,7 +752,7 @@ footer li {
     #result-message {
         font-size: 15px;
     }
-    .about {
+    #aboutContainer {
         width: 80%;
         margin-left: 10%;
     }
@@ -828,7 +828,7 @@ footer li {
     #result-message {
         font-size: 15px;
     }
-    .about {
+    #aboutContainer {
         width: 80%;
         margin-left: 10%;
     }

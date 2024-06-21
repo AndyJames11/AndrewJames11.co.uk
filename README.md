@@ -2,11 +2,15 @@
 
 ![Image from https://ui.dev/amiresponsive showing the JavaScript home page on all devices](/images/am-i-responsive.png)
 
+## This JavaScript project is built on top of my existing HTML/CSS project. To access the JavaScript project, please click on the red button at the website home page shown below. This will take you to the JavaScript pages. Any page that is not accessed from the [JavaScript Home Page](https://www.andrewjames11.co.uk/js-index.html) is from a previous project and should not be considered in the marking of this project.
+![home page button](/images/javascript%20button.png)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [User Experience](#user-experience)
 - [Design and Typography](#design-and-typography)
+- [Wireframes](#wireframes)
 - [Validation](#validation)
 - [Technologies Used](#technologies-used)
 - [Testing and Performance Optimization](#testing-and-performance-optimization)
@@ -18,7 +22,7 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
-This project is built as part of my portfolio to demonstrate the skills I have learned during the course. I have used different JavaScript methods to create various functions, including a League of Legends role and champion randomizer, a football position randomizer, a Euro 2024 sweepstake simulator, and a currency converter. I have also purchased the domain name **andrewjames11.co.uk** which is linked to my GitHub pages for this repository.
+This project is built as part of my portfolio to demonstrate the skills I have learned during the course. I have used different JavaScript methods to create various functions, including a League of Legends role and champion randomizer, a football position randomizer, a Euro 2024 sweepstake simulator, and a currency converter. I have also purchased the domain name [andrewjames11.co.uk](https://www.andrewjames11.co.uk) which is linked to my GitHub pages for this repository.
 
 ## Features
 1. **League of Legends Role and Champion Randomizer**: Allows users to randomly select roles and champions for the game.
@@ -26,6 +30,7 @@ This project is built as part of my portfolio to demonstrate the skills I have l
 3. **Euro 2024 Sweepstake Simulator**: A sweepstake for the upcoming Euros football competition where the user is prompted to input a name, and then that name is assigned to a country playing in the Euros.
 4. **Currency Converter**: A standard currency convertor which utilises a currency exchange API.
 5. **Reaction Test Game**: A game where you click a button when the colour changes from Red to Green and your speed is recorded and displayed to you.
+6. **Coming Soon Page**: A page showing a continuous timer counting down to July 8th 12:00pm. This page was made to demonstrate my skills with JavaScript Date() functions. 
 
 ## User Experience
 ### User Stories
@@ -51,6 +56,23 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - League of Legends map background
   - Football pitch hand-drawn in Microsoft Paint
 
+## Wireframes
+- **JavaScript Playground Home Page**
+![js-index.html wireframe](/wireframes/js-index.png)
+- **League of Legends Role/Champion Randomiser Page**
+![league.html wireframe](/wireframes/league.png)
+- **Football Positions Randomiser Page**
+![positions.html wireframe](/wireframes/positions.png)
+- **Euro 2024 Sweepstake Page**
+![sweepstake.html wireframe](/wireframes/sweepstake.png)
+- **Reaction Test Page**
+![reaction-test.html wireframe](/wireframes/reaction-test.png)
+- **Currency Convertor Page**
+![convertor.html wireframe](/wireframes/convertor.png)
+- **Coming Soon Page**
+![coming-soon.html wireframe](/wireframes/coming-soon.png)
+
+
 ## Technologies Used
 - **HTML**: [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) for the structure of the web page.
 - **CSS**: [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) for styling the HTML elements.
@@ -59,13 +81,13 @@ This project is built as part of my portfolio to demonstrate the skills I have l
 
 ## Validation
 - **HTML validation**
-  - W3C validator
+  - All pages tested on W3C validator. Only errors shown were 'duplicate ID' in the dropdown menu section, however I believe these are necessary for the dropdown menu to work so I have not changed them. No other errors on any pages.
 
 - **CSS validation**
-  - Jigsaw validator
+  - All pages tested on Jigsaw validator. Only error shown is with the collapsible description button. The error shown is 'Same color for background-color and border-top-color' however this is necessary as removing this border replaces it with a black border which is only intended to show on hover. No other errors on any pages.
 
 - **JavaScript validation**
-  - JSLint.com
+  - JavaScript code tested in JSLint. Some errors occur but these are almost entirely "Line is longer than 80 characters". There are some other errors according to JSLint, however when changing my code to what JSLint recommends, the code stops working as intended.
 
 ## Testing and Performance Optimization
 - **Manual Testing**:
@@ -97,14 +119,11 @@ This project is built as part of my portfolio to demonstrate the skills I have l
   - Tested that clicking the button started the game.
   - Verified that clicking the button early displayed an alert and reset the button to default state.
   - Ensured that on clicking the button after it turns green, the correct reaction time is displayed underneath.
-<<<<<<< HEAD
 - **Dropdown + Accordian Sections**
   - Verified that clicking on the dropdown arrows in the navigation bars correctly opens and closes the section.
   - Ensured that clicking on a different navigation menu closes the currently open one.
   - Verified that clicking on the accordians for the descriptions of the features correctly opens and closes the section.
   - Ensured that the content for the navigation bars and the accordian sections correctly displays and hides.
-=======
->>>>>>> 666bae0ab4e118e63ee84250ff10e0f024e816be
 
 ## Bugs
 1. **Random Role Button Text**: The text on the random role button sometimes fails to reset properly. ***Fixed 03/06/2024***
