@@ -1,5 +1,7 @@
 # JavaScript Playground
 
+![Image from https://ui.dev/amiresponsive showing the JavaScript home page on all devices](/images/am-i-responsive.png)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
