@@ -386,7 +386,7 @@ let currencyTo = document.getElementById("currencyTo"); // ID for 'To' field
 let convert = document.getElementById("convert"); // ID of the 'Convert' button
 let result = document.getElementById("finalValue"); // ID of the result field
 
-function Convert() { // Adapted from https://www.tutorialspoint.com/how-to-create-a-currency-converter-in-javascript
+function Convert() {
     let fromCurrency = currencyFrom.value; // Obtains currency selected in 'From' field
     let toCurrency = currencyTo.value; // Obtains currency selected in 'To' field
     let amount = parseFloat(currencyAmount.value); // Converts value in 'amount' field to a 'floating-point number'. 
@@ -400,21 +400,28 @@ function Convert() { // Adapted from https://www.tutorialspoint.com/how-to-creat
     }
 
     // Obtains current conversion rates from the currency converter API. 
-    fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`) // Returns a promise from the API
-    .then(response => response.json()) // Handles the promise and parses the JSON text
-    .then(data => { // Handles promise returned by the response.json()
-        if (data.conversion_rates && data.conversion_rates[toCurrency]) { // Checks if 'data' has a proprety of 'conversion_rates' and if it contains the target currency
-            let rate = data.conversion_rates[toCurrency]; // stores the conversion rate of the specified currency
-            let total = rate * amount; // Multiplies the conversion rate by the amount in the input field
-            result.innerHTML = `${amount} ${fromCurrency} = ${total.toFixed(2)} ${toCurrency}`; 
-            // Updates innerHTML text to show the amount of the selected currency e.g. $200 = the calculated total to 2 decimal places e.g. £160
+    fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.conversion_rates && data.conversion_rates[toCurrency]) {
+            let rate = data.conversion_rates[toCurrency];
+            let total = rate * amount;
+            result.innerHTML = `${amount} ${fromCurrency} = ${total.toFixed(2)} ${toCurrency}`;
         }
     })
-    .catch(error => { // Catches any errors that occur
-        console.error('Error fetching the exchange rate:', error); // Logs error message to console
-        result.innerHTML = "Sorry, something went wrong."; // Displays this text if an error occurs
+    .catch(error => {
+        console.error('Error fetching the exchange rate:', error);
+        result.innerHTML = "Sorry, something went wrong.";
     });
 };
+
+function clearVal() { // Resets input fields
+    currencyAmount.value = "";
+    currencyFrom.value = "Select One";
+    currencyTo.value = "Select One";
+    
+    result.innerHTML = ""; // Clears the result display
+}
 
 // NAVBAR DROPDOWN MENUS
 

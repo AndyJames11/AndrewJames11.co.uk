@@ -56,7 +56,7 @@ a:hover {
   width: 480px;
   min-width: 480px;
   border: 1px solid rgb(0, 0, 0);
-  z-index: 1;
+  z-index: 2;
   font-size: medium;
   transform: translateY(35px);
 }
@@ -274,25 +274,40 @@ h3 {
 #LW { top: 80%; left: 80%; transform: translate(-50%, -50%); }
 
 
- .position {
-    position: absolute;
-    width: 100px;
-    height: 55px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    line-height: 55px;
-    text-align: center;
-    font-weight: bold;
-    transform: translate(-50%, -50%);
-  }
+.position {
+  position: absolute;
+  width: 100px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  line-height: 55px;
+  text-align: center;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
   
-    /* Sweepstake section styling */
+/* Sweepstake section styling */
 #sweepstake {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+h4 {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+#countries {
+  transform: translateY(90px);
+  padding-bottom: 15px;
+}
+
+.country {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 
 #convertor {
-    transform: translateY(-5px);
+    transform: translateY(100px);
 }
 
 /* FOOTER AND NAV ELEMENTS BELOW */
@@ -412,20 +427,6 @@ span {
   .content {
       font-size: 25px;
   }
-  .game {
-      margin-top: 17%;
-  }
-  .about {
-      margin-top: 8%;
-      width: 70%;
-      margin-left: 15%;
-  }
-  #about h2 {
-      font-size: 30px;
-  }
-  #about p {
-      font-size: 22.5px;
-  }
   footer {
     letter-spacing: 1.5px;
     font-size: 25px;
@@ -467,22 +468,8 @@ span {
       font-size: 20px;
       transform: translateY(65px);
   }
-  .game {
-      margin-top: 18%;
-  }
   .button {
       font-size: 35px;
-  }
-  .about {
-      width: 80%;
-      margin-left: 10%;
-      margin-top: 5%;
-  }
-  #about h2 {
-      font-size: 30px;
-  }
-  #about p {
-      font-size: 25px;
   }
   footer {
     letter-spacing: 1.5px;
@@ -517,25 +504,8 @@ span {
   .content {
       font-size: 18.5px;
   }
-  .game {
-      margin-top: 12%;
-  }
-  .button {
-      font-size: 30px;
-  }
   button {
       height: 80px;
-  }
-  .about {
-      margin-top: 3%;
-      width: 80%;
-      margin-left: 10%;
-  }
-  #about h2 {
-      font-size: 25px;
-  }
-  #about p {
-      font-size: 20px;
   }
   footer {
     font-size: 12.5px;
@@ -569,6 +539,15 @@ span {
   .dropdownContent a {
       font-size: 25px;
   }
+  label, select {
+    font-size: 30px;
+  }
+  .randomButtons, #resetButtons {
+    height: 100px;
+    width: 350px;
+    font-size: 30px;
+    margin: 16px 16px;
+  }
   .collapsible {
       height: 100px;
       font-size: 30px;
@@ -577,22 +556,14 @@ span {
       font-size: 25px;
       transform: translateY(105px);
   }
-  .game {
-      margin-top: 18%;
+  #pitch {
+    transform: translateY(50px);
   }
-  .button {
-      font-size: 40px;
-  }
-  .about {
-      width: 80%;
-      margin-left: 10%;
-      margin-top: 5%;
-  }
-  #about h2 {
-      font-size: 40px;
-  }
-  #about p {
-      font-size: 30px;
+  .position {
+    width: 140px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
   }
   footer {
     letter-spacing: 1.5px;
@@ -645,22 +616,6 @@ span {
   .content {
       font-size: 15px;
       transform: translateY(55px);
-  }
-  .game {
-      margin-top: 18%;
-  }
-  #result-message {
-      font-size: 20px;
-  }
-  .about {
-      width: 80%;
-      margin-left: 10%;
-  }
-  #about h2 {
-      font-size: 20px;
-  }
-  #about p {
-      font-size: 17.5px;
   }
   footer {
     font-size: 12.5px;
@@ -718,24 +673,41 @@ span {
       font-size: 15px;
       transform: translateY(55px);
   }
-  .game {
-      margin-top: 18%;
+  .col-sm-6, .col-sm-2 {
+    width: 200px;
   }
-  .button {
-      font-size: 30px;
+  .randomButtons, #resetButtons {
+    height: 50px;
+    width: 175px;
+    border-radius: 15px;
+    font-size: 15px;
   }
-  #result-message {
-      font-size: 20px;
+  .roleButtons {
+    background-size: 30px;
+    width: 50px;
+    height: 50px;
   }
-  .about {
-      width: 70%;
-      margin-left: 15%;
+  #top {
+    top: 18%;
   }
-  #about h2 {
-      font-size: 25px;
+  #jung {
+    top: 30%;
   }
-  #about p {
-      font-size: 20px;
+  #mid {
+    top: 31%;
+  }
+  #adc {
+    top: 44%;
+    left: 71%;
+  }
+  #supp {
+    top: 54%;
+  }
+  .position {
+    width: 65px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
   }
   footer {
     height: 25px;
@@ -755,79 +727,60 @@ span {
 /* LARGE MOBILE SCREENS */
 @media (width <= 425px) and (height <= 1024px) {
   html, body {
-      height: 100vh;
-      width: 100vw;
-    }
-    #nav, #navOption {
-        height: 50px;
-    }
-    #nav .row > .col-sm-4 {
-        display: none;
-    }
-    .combined-dropdown {
-        display: block !important;
-    }
-    .dropdownContent {
+    height: 100vh;
+    width: 100vw;
+  }
+  #nav, #navOption {
+      height: 50px;
+  }
+  #nav .row > .col-sm-4 {
       display: none;
-    }
-    .dropdownContent.show {
-      display: block;
-    }
-    .label {
-        font-size: 15px;
-        margin-top: 15px;
-    }
-    .dropdownContent {
-        transform: translateY(50px);
-        margin-left: -240px;
-        font-size: 15px;
-        width: 420px;
-        min-width: 420px;
-    }
-    .dropdownContent a {
-        padding: 3px 0;
-        letter-spacing: 1px;
-    }
-    .collapsible {
-        height: 50px;
-        font-size: 15px;
-    }
-    .content {
-        font-size: 15px;
-        transform: translateY(55px);
-    }
-    .game {
-        margin-top: 18%;
-    }
-    .button {
-        font-size: 30px;
-    }
-    #result-message {
-        font-size: 20px;
-    }
-    .about {
-        width: 70%;
-        margin-left: 15%;
-    }
-    #about h2 {
-        font-size: 25px;
-    }
-    #about p {
-        font-size: 20px;
-    }
-    footer {
-      height: 25px;
-      font-size: 17.5px;
-      letter-spacing: normal;
-    }
-    footer li {
-      margin-left: 8%;
-      padding-left: 0px;
-      padding-right: 0px; 
-    }
-    .copyright {
-      display: none;
-    }
+  }
+  .combined-dropdown {
+      display: block !important;
+  }
+  .dropdownContent {
+    display: none;
+  }
+  .dropdownContent.show {
+    display: block;
+  }
+  .label {
+      font-size: 15px;
+      margin-top: 15px;
+  }
+  .dropdownContent {
+      transform: translateY(50px);
+      margin-left: -240px;
+      font-size: 15px;
+      width: 420px;
+      min-width: 420px;
+  }
+  .dropdownContent a {
+      padding: 3px 0;
+      letter-spacing: 1px;
+  }
+  .collapsible {
+      height: 50px;
+      font-size: 15px;
+  }
+  .content {
+      font-size: 15px;
+      transform: translateY(55px);
+  }
+  footer {
+    height: 25px;
+    font-size: 17.5px;
+    letter-spacing: normal;
+  }
+  footer li {
+    margin-left: 8%;
+    padding-left: 0px;
+    padding-right: 0px; 
+  }
+  .copyright {
+    display: none;
+  }
 }
 
 /* MEDIUM MOBILE SCREENS */
@@ -874,27 +827,8 @@ span {
       font-size: 13px;
       transform: translateY(52px);
   }
-  .game {
-      margin-top: 22%;
-  }
   button {
       height: 80px;
-  }
-  .button {
-      font-size: 20px;
-  }
-  #result-message {
-      font-size: 15px;
-  }
-  .about {
-      width: 80%;
-      margin-left: 10%;
-  }
-  #about h2 {
-      font-size: 20px;
-  }
-  #about p {
-      font-size: 15px;
   }
   footer li {
     margin-left: 5%;
@@ -950,27 +884,8 @@ span {
       font-size: 13px;
       transform: translateY(52px);
   }
-  .game {
-      margin-top: 25%;
-  }
   button {
       height: 80px;
-  }
-  .button {
-      font-size: 20px;
-  }
-  #result-message {
-      font-size: 15px;
-  }
-  .about {
-      width: 80%;
-      margin-left: 10%;
-  }
-  #about h2 {
-      font-size: 20px;
-  }
-  #about p {
-      font-size: 15px;
   }
   footer {
     font-size: 12.5px;

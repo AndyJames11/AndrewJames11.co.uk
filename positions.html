@@ -12,6 +12,49 @@
 </head>
 
 <body>
+  <div id="nav">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Randomisers</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown1">
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Other Pages</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown2">
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <a href="../js-index.html" class="label">Home Page</a>
+        </div>
+      </div>
+      <div class="row justify-content-center combined-dropdown" id="combinedDropdown">
+        <div class="col-sm-12" id="navOption">
+          <p class="label">Menu</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrowCombined" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdownCombined">
+            <a href="../js-index.html">Home Page</a>
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- FOOTBALL POSITION RANDOMISER SECTION -->
 
 <div class="container text-center my-3">
@@ -32,6 +75,14 @@
       </div>
     </div>
   </div>
+
+  <div id="description">
+    <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
+    <div class="content">
+      <p>This page is a randomiser for positions in a football match. It is primarily used for FIFA which is an online football game where people can play in the same team together and choose the position they want to play in the game. This page prompts the user to choose a formation and then input a name or number when clicking on 'Random Position' and it will then assign the given name/number to a position in the currently selected formation.</p>
+    </div>
+  </div>
+  
   <div class="container text-center" id="pitch">
     <div class="row">
       <img src="/images/pitch.png" class="roleMap">

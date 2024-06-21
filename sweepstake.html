@@ -12,6 +12,49 @@
 </head>
 
 <body>
+  <div id="nav">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Randomisers</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown1">
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <p class="label">Other Pages</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrow" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdown2">
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
+        </div>
+        <div class="col-sm-4" id="navOption">
+          <a href="../js-index.html" class="label">Home Page</a>
+        </div>
+      </div>
+      <div class="row justify-content-center combined-dropdown" id="combinedDropdown">
+        <div class="col-sm-12" id="navOption">
+          <p class="label">Menu</p>
+          <i class="fa-solid fa-chevron-down fa-2xs navbarArrow" id="navbarArrowCombined" style="color: #000000; cursor: pointer;"></i>
+          <div class="dropdownContent" id="dropdownCombined">
+            <a href="../js-index.html">Home Page</a>
+            <a href="../league.html">League of Legends Role/Champion Randomiser</a>
+            <a href="../positions.html">Football Positions Randomiser</a>
+            <a href="../sweepstake.html">Euro 2024 Sweepstake Picker</a>
+            <a href="../convertor.html">Currency Convertor</a>
+            <a href="../reaction-test.html">Reaction Test Game</a>
+            <a href="../coming-soon.html">Coming Soon!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- EURO 2024 SWEEPSTAKE SECTION -->
 
 <div class="container text-center" id="sweepstake">
@@ -23,7 +66,15 @@
         <button onclick="resetSweepstake()" class="randomButtons" id="resetButtons">Reset</button>
       </div>
     </div>
-    <div class="row justify-content-center">
+
+    <div id="description">
+      <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
+      <div class="content">
+        <p>This page is a simple sweepstake page for the 20204 Euros competition. The page is used to take an input from the user when they click on  the 'Sweepstake' button and then assign that given input to one of the countries playing in the Euros competition. The idea of the sweepstake is that, whoever is assigned the country that ends up winning the tournament, is the winner of the sweepstake.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center" id="countries">
       <div class="col-sm-2">
         <h4>Group A</h4>
         <p class="country" id="Germany">Germany</p>
