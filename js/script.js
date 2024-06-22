@@ -74,14 +74,14 @@ function randMid() { // Defines an array and chooses a random item when the butt
         "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko",
         "Nidalee", "Nilah", "Nocturne", "Nunu & Willump", "Olaf", "Orianna", "Ornn",
         "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai",
-        "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze",
+        "Rell", "Renata Glasc", "Renekton", "Re ngar", "Riven", "Rumble", "Ryze",
         "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana",
         "Singed", "Sion", "Sivir", "Skarner", "Smoulder", "Sona", "Soraka", "Swain",
         "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo",
         "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch",
         "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego",
         "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath",
-        "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac", "Zed", "Zeri", "Ziggs", "Zilean",
+        "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zed", "Zeri", "Ziggs", "Zilean",
         "Zoe", "Zyra"
     ];
     let randomMid = midArray[Math.floor(Math.random() * midArray.length)];
@@ -134,7 +134,7 @@ function randSupp() { // Defines an array and chooses a random item when the but
         "Warwick", "Wukong", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Zac",
         "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra"
     ];
-    let randomSupp = supArray[Math.floor(Math.random() * suppArray.length)];
+    let randomSupp = suppArray[Math.floor(Math.random() * suppArray.length)];
     alert(randomSupp); // Displays alert with selected item from the array
     // document.getElementById("suppText").innerHTML = randomSupp;
 }
