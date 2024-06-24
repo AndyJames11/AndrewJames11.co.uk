@@ -1,7 +1,3 @@
-// Collapsible sections for descriptions on each JavaScript section
-
-// Possible dark/light mode switch
-
 function randRole() { // Defines an array and chooses a random item when the button is clicked
     let roleArray= ["Top","Jungle","Mid","ADC","Support"];
     let randomRole = roleArray[Math.floor(Math.random() * roleArray.length)];
@@ -361,7 +357,7 @@ function Sweepstake() { // If all countries assigned, display an alert
   countryElement.style.color = "white";
 }
 
-function resetSweepstake() {
+function resetSweepstake() { // Resets sweesptake section back to default state
     const countryElements = document.getElementsByClassName("country");
     for (let i = 0; i < countryElements.length; i++) {
         countryElements[i].innerHTML = originalCountryContent[i];

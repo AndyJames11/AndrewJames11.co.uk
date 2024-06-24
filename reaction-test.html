@@ -56,27 +56,27 @@
   </div>
 
   <div id="description">
-    <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
+    <button type="button" id="descriptionButton" class="collapsible">Click here for a description of this page</button>
     <div class="content">
       <p>This page features a dropdown navigation menu which users can acess by clicking the arrow. It also features a reaction test game where the user is prompted to click the button and then as soon as the button turns green, click it again. Then the score is caclulated by how long it took for the user to click the button after it became green.</p>
     </div>
   </div>
 
   <div id="container" class="game">
-    <div id="default-state">
-        <button id="start-button" class="button" onclick="reactionTest()">Click me to begin reaction test!</button>
+    <div id="defaultState">
+        <button id="startButton" class="button" onclick="reactionTest()">Click me to begin reaction test!</button>
     </div>
-    <div id="first-click" class="button" style="display: none;">
-        <button id="delay-button" style="background-color: red; color: white; text-shadow: 0px 0px 1px black;">Wait for green!</button>
+    <div id="firstClick" class="button" style="display: none;">
+        <button id="delayButton" style="background-color: red; color: white; text-shadow: 0px 0px 1px black;">Wait for green!</button>
     </div>
-    <div id="second-click" class="button" style="display: none;">
-        <button id="result-button" style="background-color: green; color: white; text-shadow: 0px 0px 1px black;">Click!</button>
+    <div id="secondClick" class="button" style="display: none;">
+        <button id="resultButton" style="background-color: green; color: white; text-shadow: 0px 0px 1px black;">Click!</button>
     </div>
-    <div id="try-again" class="button" style="display: none">
+    <div id="tryAgain" class="button" style="display: none">
         <button onclick="location.reload()">Play Again!</button> <!-- Reloads page when button is clicked -->
     </div>
     <div>
-        <p id="result-message"></p>
+        <p id="resultMessage"></p>
     </div>
   </div>
 
@@ -86,7 +86,7 @@
       <div id="about">
         <h2>About the test</h2>
         <p>This is a simple tool to measure your reaction time.</p>
-        <p>The average (median) reaction time is 0.273 seconds, according to the data collected so far.</p>
+        <p>The average (median) reaction time is 0.284 seconds, according to the data collected so far.</p>
         <p>Good luck!</p>
       </div>
     </div>
