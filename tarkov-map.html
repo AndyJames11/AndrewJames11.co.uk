@@ -58,68 +58,53 @@
       </div>
     </div>
   </div>
-<br>
-<!-- Page description element -->
-  <div id="description">
-    <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
-    <div class="content">
-      <p>This page features a simple currency convertor. The convertor uses an API which fetches the latest conversion rates for the chosen currencies. It then runs the calculations and provides the converted value. The styling is not finished for this page yet but I plan to make it look better in the future.</p>
-    </div>
+
+  <!-- TARKOV MAP RANDOMISER SECTION -->
+
+  <div id="tarkov-map">
+    <img src="../images/tarkov.jpg">
   </div>
 
-<!-- CURRENCY CONVERTOR SECTION -->
-
-<!-- AMOUNT TO CONVERT -->
-  <div class="container text-center" id="convertor">
-    <label for="currencyAmount">Amount to Convert:</label>
-    <input type="text" class="currencyAmount" placeholder="0.00" id="currencyAmount">
-    
-  <!-- CONVERTED FROM -->  
+  <!-- RANDOMISER BUTTONS -->
+  <div class="container text-center">
     <div class="row justify-content-center">
-      <div class="col-sm-auto">
-        <span>From</span>
-        <select id="currencyFrom" name="currencyFrom">
-          <option value="Select One">Please choose a currency</option>
-          <option value="AUD">AUD ($)</option>
-          <option value="CAD">CAD ($)</option>
-          <option value="CNY">CNY (¥)</option>
-          <option value="EUR">EUR (€)</option>
-          <option value="GBP">GBP (£)</option>
-          <option value="JPY">JPY (¥)</option>
-          <option value="USD">USD ($)</option>
-        </select>
+      <div class="col-sm-6">
+        <button class="tarkovButtons" id="randMapButton" onclick="tarkovMap()">Random Map</button>
       </div>
-
-      <!-- CURRENCY TO CONVERT TO -->
-      <div class="col-sm-auto">
-        <span>To</span>
-        <select id="currencyTo" name="currencyTo">
-          <option value="Select One">Please choose a currency</option>
-          <option value="AUD">AUD ($)</option>
-          <option value="CAD">CAD ($)</option>
-          <option value="CNY">CNY (¥)</option>
-          <option value="EUR">EUR (€)</option>
-          <option value="GBP">GBP (£)</option>
-          <option value="JPY">JPY (¥)</option>
-          <option value="USD">USD ($)</option>
-        </select>
-      </div>
+      <!-- <div class="col-sm-6">
+        <button class="tarkovButtons" id="tarkovResetButtons" onclick="resetTarkov()">Reset</button>
+      </div> -->
+    </div>
+  </div>
   
-
-      <!-- CURRENCY CONVERT BUTTONS/RESULT -->
-      <div class="row justify-content-center">
-        <div class="col-sm-auto">
-          <button class="convertorBtns" id="convert" type="submit" onClick="Convert()">Convert</button>
-          <button class="convertorBtns" onclick="clearVal()">Reset</button>
+  <!-- Modal structure -->
+  <div id="mapModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mapModalTitle">Selected Map</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="mapImage" src="" alt="Map Image" style="width:100%; height:auto;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="closeModal()">Close</button>
         </div>
       </div>
-      <div id="finalAmount" class="text-center">
-        <h2>Converted Amount:
-          <span class="finalValue" id="finalValue" style="color:rgb(0, 0, 0);"></span>
-        </h2>
-      </div>
     </div>
   </div>
+  
+
+  <!-- <div id="description">
+    <button type="button" id="description-button" class="collapsible">Click here for a description of this page</button>
+    <div class="content">
+      <p>Placeholder</p>
+    </div>
+  </div> -->
+
   <!-- Footer elements -->
   <footer>
     <ul>

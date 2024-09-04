@@ -489,3 +489,56 @@ for (i = 0; i < accordian.length; i++) {
     }
   });
 }
+
+
+// Tarkov Section
+
+function tarkovMap() {
+    // Define the locations with corresponding weights and image sources
+    let mapArray = [
+        { map: "Factory", weight: 0.0333, imgSrc: "../images/factory.webp" },
+        { map: "Customs", weight: 0.3, imgSrc: "../images/customs.webp" },
+        { map: "Interchange", weight: 0.3, imgSrc: "../images/interchange.webp" },
+        { map: "Labs", weight: 0.0333, imgSrc: "../images/lab.webp" },
+        { map: "Shoreline", weight: 0.0333, imgSrc: "../images/shoreline.webp" },
+        { map: "Lighthouse", weight: 0.1, imgSrc: "../images/lighthouse.webp" },
+        { map: "Streets", weight: 0.1, imgSrc: "../images/streets.webp" },
+        { map: "Woods", weight: 0.0333, imgSrc: "../images/woods.webp" },
+        { map: "Ground Zero", weight: 0.0333, imgSrc: "../images/ground-zero.webp" },
+        { map: "Reserve", weight: 0.0333, imgSrc: "../images/reserve.webp" }
+    ];
+
+    // Calculate the total weight
+    let totalWeight = mapArray.reduce((sum, mapObj) => sum + mapObj.weight, 0);
+
+    // Generate a random number between 0 and the total weight
+    let randomNum = Math.random() * totalWeight;
+
+    // Iterate through the array to find where the random number falls
+    let cumulativeWeight = 0;
+    let selectedMapObj = null;
+
+    for (let i = 0; i < mapArray.length; i++) {
+        cumulativeWeight += mapArray[i].weight;
+        if (randomNum <= cumulativeWeight) {
+            selectedMapObj = mapArray[i];
+            break;
+        }
+    }
+
+    // Display the selected map name and image in the modal
+    document.getElementById("mapModalTitle").innerHTML = selectedMapObj.map;
+    document.getElementById("mapImage").src = selectedMapObj.imgSrc;
+
+    // Show the modal
+    document.getElementById("mapModal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById("mapModal").style.display = "none";
+}
+
+// function resetTarkov() { // Resets elements back to original state when clicked
+//     document.getElementById("randMapButton").innerHTML = "Random Map";
+// }
